@@ -3,13 +3,11 @@ from openai import OpenAI
 
 
 def prep():
-    client = OpenAI()  # OPENAI_API_KEY ortamda olmalı
-    # 1) Vector store oluştur
+    client = OpenAI()  
     vs = client.vector_stores.create(name="SAREF Store")
     
     return client, vs
 
-# 2) Dosyayı store'a yükleyip indeksle (poll’lu toplu yükleme)
 
 def create_batch_vectors(client, vs, ttl_path): #txt
     with open(ttl_path, "rb") as f:
@@ -17,10 +15,8 @@ def create_batch_vectors(client, vs, ttl_path): #txt
             vector_store_id=vs.id,
             files=[f]
     )
-    #assert batch.status == "completed"
     return batch
 
-# 3) Assistant’ı file_search + tool_resources ile bağla
 
 def bind_assistant_to_file_search(client, vs):
     assistant = client.beta.assistants.create(
@@ -61,7 +57,7 @@ def create_message_form(client, nlq):
 
 import time
 def run_llm(client, thread, assistant):
-    # 5) Run ve sonuç
+
     run = client.beta.threads.runs.create(thread_id=thread.id, assistant_id=assistant.id)
 
 
@@ -92,15 +88,11 @@ def read_nlqs(nlq_file):
     return df
 
 def save_queries(df, queries):
-    # Yeni kolon(lar) ekle
     df["generated queries minirag"] = queries
 
-    # Yeni dosyaya kaydet
     df.to_excel("../outputs/minirag_combined_mixed.xlsx", index=False)
 
-def run(ttl_path, nlq_file):
-    #ttl_path = "../tmp_output_im/saref_old/preprocessed_kg_all_last.ttl"
-    #nlq_file = competency_question.xlsx
+def run_batch(ttl_path, nlq_file):
     df = read_nlqs(nlq_file)
     nlq_list = df["NLQ"].tolist()
     queries = []
@@ -115,13 +107,48 @@ def run(ttl_path, nlq_file):
         print(query)
         print("-----")
     save_queries(df, queries)
+    
+def run(ttl_path, nlq):
+
+    client, vs = prep()
+    create_batch_vectors(client, vs, ttl_path)
+    assistant = bind_assistant_to_file_search(client, vs)
+    client, thread = create_message_form(client, nlq)
+    query = run_llm(client, thread, assistant)
+
+    return query
 
     
-    
+
+import argparse
+
 if __name__ == "__main__":
-    ttl_path = "../inputs/saref_large.txt"
-    nlq_file = "../inputs/competency_question.xlsx"
-    run(ttl_path, nlq_file)
+    parser = argparse.ArgumentParser(description="Run Industrial Graph RAG")
+
+    parser.add_argument(
+        "--txt_file",
+        type=str,
+        required=True,
+        help="txt_file knowledge graph file"
+    )
+
+    parser.add_argument(
+        "--nlq",
+        type=str,
+        required=True,
+        help="Path to the NLQ input"
+    )
+
+    args = parser.parse_args()
+
+    sparql_query = run(args.txt_file, args.nlq)
+    print(sparql_query)
+    
+    #ttl_path = "../inputs/saref_large.txt"
+    #nlq_file = "../inputs/competency_question.xlsx"
+    #run_batch(ttl_path, nlq_file)
+    
+# python mini_rag.py --txt_file "../inputs/saref_large.txt" --nlq "what is the instance of the temperature sensor?"
 
 
 

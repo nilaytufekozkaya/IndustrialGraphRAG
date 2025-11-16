@@ -155,7 +155,7 @@ def save_queries(df, queries):
     # Yeni dosyaya kaydet
     df.to_excel("../outputs/llamaindex_saref.xlsx", index=False)
 
-def run(ttl_path, nlq_file):
+def run_batch(ttl_path, nlq_file):
     # 1) Load TTL
     g = Graph()
     g.parse(ttl_path, format="turtle")
@@ -213,75 +213,60 @@ def generate_prompt(nlq, context):
     print("prompt:", prompt)
     return prompt
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("ttl", help="Path to Turtle file")
-    ap.add_argument("nlq", help="Natural-language question/claim")
-    ap.add_argument("--model", default="gpt-4o", help="OpenAI model (default: gpt-4o)")
-    ap.add_argument("--mode", choices=["auto","ask","select"], default="auto", help="Force query type or let LLM decide")
-    ap.add_argument("--k_triples", type=int, default=60)
-    ap.add_argument("--k_schema", type=int, default=40)
-    ap.add_argument("--out_csv", default="sparql_select_result.csv")
-    args = ap.parse_args()
-
+        
+        
+def run(ttl_path, nlq):
     # 1) Load TTL
     g = Graph()
-    g.parse(args.ttl, format="turtle")
+    g.parse(ttl_path, format="turtle")
+    model = "gpt-4o"
+    mode = "select"
 
     # 2) Build context
-    context = build_context(g, args.nlq, k_triples=args.k_triples, k_schema=args.k_schema)
+    context = build_context(g, nlq, k_triples=60, k_schema=40)
 
     # 3) LLM
-    llm = _init_llm(model=args.model)
+    llm = _init_llm(model=model)
 
     # 4) Compose prompt
-    prompt = generate_prompt(args.nlq, context)
-    if args.mode == "ask":
+    prompt = generate_prompt(nlq, context)
+    if mode == "ask":
         prompt = prompt.replace("If the NLQ is a boolean claim, prefer an ASK query; otherwise SELECT.",
                                 "Always produce an ASK query (boolean).")
-    elif args.mode == "select":
+    elif mode == "select":
         prompt = prompt.replace("If the NLQ is a boolean claim, prefer an ASK query; otherwise SELECT.",
                                 "Always produce a SELECT query (tabular).")
 
     # 5) Generate SPARQL
     text = _llm_complete(llm, prompt)
-    sparql = extract_sparql(text)
-    if not sparql:
+    sparql_query = extract_sparql(text)
+    if not sparql_query:
         print("Failed to extract SPARQL from LLM output:\n", text)
         sys.exit(3)
+    return sparql_query
 
-    print("=== GENERATED SPARQL ===")
-    print(sparql)
-
-    # 6) Execute
-    try:
-        qtype, result = run_sparql(g, sparql)
-    except Exception as e:
-        print("\nSPARQL execution failed:", e)
-        sys.exit(4)
-
-    print("\n=== RESULT ===")
-    if qtype == "ASK":
-        print("TRUE" if result else "FALSE")
-    else:
-        headers, rows = result
-        # Print small preview
-        max_rows = 20
-        print(f"Rows: {len(rows)} (showing up to {max_rows})")
-        print([str(h) for h in headers])
-        for r in rows[:max_rows]:
-            print(r)
-        # Save CSV
-        save_csv(headers, rows, args.out_csv)
-        print(f"\nSaved full SELECT results to: {args.out_csv}")
 
 if __name__ == "__main__":
-    #main()
-    ttl_path = "../inputs/saref_large.ttl"
-    nlq_file = "../inputs/competency_question.xlsx"
+    parser = argparse.ArgumentParser(description="Run Industrial Graph RAG")
+
+    parser.add_argument(
+        "--ttl_file",
+        type=str,
+        required=True,
+        help="TTL knowledge graph file"
+    )
+
+    parser.add_argument(
+        "--nlq",
+        type=str,
+        required=True,
+        help="Path to the NLQ input"
+    )
+
+    args = parser.parse_args()
+
+    sparql_query = run(args.ttl_file, args.nlq)
+    print(sparql_query)
     
-    ap = argparse.ArgumentParser()
-    ap.add_argument("ttl", help="Path to Turtle file")
-    ap.add_argument("nlq", help="Natural-language question/claim")
     
-    run(ttl_path, nlq_file)
+# python llamaindex.py --ttl_file "../inputs/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"

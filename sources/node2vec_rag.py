@@ -1,12 +1,12 @@
 import networkx as nx
-from rdflib import Graph, URIRef, RDF
+from rdflib import Graph, URIRef
 from node2vec import Node2Vec
 import numpy as np
 from langchain_openai import OpenAIEmbeddings
 from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
-from rdflib.namespace import RDFS, OWL
 from sklearn.metrics.pairwise import cosine_similarity
+import argparse
 
 def read_graph(ttl_path):
     
@@ -81,13 +81,13 @@ def run_llm(context, nlq):
     text = text.replace("{NLQ}", nlq)
     prompt = text.replace("{QT}", "SELECT")
 
-    print("prompt:", prompt)
+    #print("prompt:", prompt)
 
     llm = ChatOpenAI(model="gpt-4o", temperature=0)
     query = llm.invoke([SystemMessage(content="Generate only valid full SPARQL (SELECT form)."),
                         HumanMessage(content=prompt)]).content.strip()
 
-    print(query)
+    #print(query)
     return query
 
 def run_query(query,g):
@@ -109,7 +109,7 @@ def save_queries(df, queries):
     df.to_excel("../outputs/node2vec_combined_mixed.xlsx", index=False)
     print("written!")
         
-def run(ttl_path, nlq_file):
+def run_batch(ttl_path, nlq_file):
     G, g = read_graph(ttl_path)
     node_embeddings = node2vec_embedding(G)
     queries = []
@@ -128,12 +128,50 @@ def run(ttl_path, nlq_file):
         
     save_queries(df, queries)
         
+        
+def run(ttl_path, nlq):
+    G, g = read_graph(ttl_path)
+    node_embeddings = node2vec_embedding(G)
+
+    nlq_vec = nlq_embeddings(nlq)
+    nearest = find_nearest_nodes(nlq_vec, node_embeddings)
+    context = build_context(nearest, g)
+    sparql_query = run_llm(context, nlq)
+
+    return sparql_query
     
     
+    
+
+
 if __name__ == "__main__":
-    ttl_path = "../inputs/saref_large.ttl"
-    nlq_file = "../inputs/competency_question.xlsx"
-    run(ttl_path, nlq_file)
+    parser = argparse.ArgumentParser(description="Run Industrial Graph RAG")
+
+    parser.add_argument(
+        "--ttl_file",
+        type=str,
+        required=True,
+        help="TTL knowledge graph file"
+    )
+
+    parser.add_argument(
+        "--nlq",
+        type=str,
+        required=True,
+        help="Path to the NLQ input"
+    )
+
+    args = parser.parse_args()
+
+    sparql_query = run(args.ttl_file, args.nlq)
+    print(sparql_query)
+    
+    #ttl_path = "../inputs/saref_large.ttl"
+    #nlq_file = "../inputs/competency_question.xlsx"
+    #run_batch(ttl_path, nlq_file)
+    
+    
+# python node2vec_rag.py --ttl_file "../inputs/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
     
         
     

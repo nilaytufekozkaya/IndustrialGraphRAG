@@ -33,8 +33,6 @@ def call_llm_for_match(nlq, entity_list):
     template = NER_PROMPT_TEMPLATE.replace("{nlq}", nlq)
     template = template.replace("{entity_list}", entity_str)
 
-    print(template)
-
 
     response = client.chat.completions.create(
         model="gpt-4o",
@@ -45,7 +43,6 @@ def call_llm_for_match(nlq, entity_list):
     )
 
     msg = response.choices[0].message.content
-    print(msg)
     return msg
 
 def extract_matches(matched_output):
@@ -60,7 +57,6 @@ def extract_matches(matched_output):
         if tt0 == -1 or zz == -1:
             return json.loads("{}")
         parsed_match = json.loads(json_output)
-        print("DEBUG parsed match: ", parsed_match)
         
         # extra validation to catch unexpected outputs like empty outputs
         
@@ -92,20 +88,17 @@ def subject_uri_for(entity: str, csv_path: str) -> str | None:
 
 
 def run_entity_matcher(nlq, csv):
-    #csv = "/Users/nilaytufek/projects/xtech_demo/opc-ua-copilot/tmp_output_im/preprocessed_map.csv"
     entity_list = get_labels(csv)
-
-    #nlq = "the labels of all subclasses of BaseObjectType include ObjectType as part of the name"
 
     msg = call_llm_for_match(nlq, entity_list)
     matches = extract_matches(msg)
     subject_uris = []
     match2 = {}
     for k,v in matches.items():
-        print(k,v)
+
         s_uri = subject_uri_for(v,csv)
         subject_uris.append(s_uri)
         match2[k] = s_uri
-        print(s_uri)
+
         
     return match2

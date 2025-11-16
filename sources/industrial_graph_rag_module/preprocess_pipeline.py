@@ -9,13 +9,12 @@ from .preprocess_formatter import format_kg_for_namespaces, convert_hashes_to_sl
 from .local_kg_processor import remove_owl_restrictions
 
 def preprocess_pipeline(input_file_path=(INPUT_PATH + "/" + INPUT_KG_NAME), output_file_path=(OUTPUT_PATH + "/" + OUTPUT_KG_NAME), node_id_mapping_path=(OUTPUT_PATH + "/" + NODEID_BROWSENAME_MAPPING_NAME), intermediate_software_artifacts_directory=INTERMEDIATE_SOFTWARE_ARTIFACTS_PATH):
-    print("Knowledge graph preparation pipeline started...")
+
 
     if FORMAT_NAMESPACES:
         format_kg_for_namespaces(input_file=os.path.abspath(input_file_path), intermediate_file=os.path.abspath((intermediate_software_artifacts_directory + "/formatted_kg_namespaces.ttl")))
 
     if PROCESS_KG_LOCALLY:
-        print("The knowledge graph is being processed to remove the OWL restrictions.")
         if FORMAT_NAMESPACES:
             remove_owl_restrictions(input_file=os.path.abspath((intermediate_software_artifacts_directory + "/formatted_kg_namespaces.ttl")), output_file = os.path.abspath((intermediate_software_artifacts_directory + "/kg_without_owl_restrictions.ttl")))
         else:
@@ -39,7 +38,7 @@ def preprocess_pipeline(input_file_path=(INPUT_PATH + "/" + INPUT_KG_NAME), outp
 
     #remove temporary
     shutil.rmtree(intermediate_software_artifacts_directory)  
-    print("Pipeline finished.")
+
 
 
 

@@ -10,7 +10,6 @@ from openai import OpenAI
 
 
 def call_queries(queries, kg_name):
-    print("kg_name", kg_name)
     graph = rdflib.Graph()
     graph = graph.parse(kg_name)
     results = []
@@ -112,7 +111,7 @@ def call_gpt_only_without_azure(prompt):
         messages=message_text
     )
 
-    print(response.choices[0].message.content)
+    #print(response.choices[0].message.content)
     return response.choices[0].message.content
 
 def call_gpt_only(prompt):

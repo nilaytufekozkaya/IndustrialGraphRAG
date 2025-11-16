@@ -6,8 +6,6 @@ from .config import NLQ_TYPE, SUB_GRAPH_FILE
 
 import pandas as pd
 def read_nlqs(nlq_file):
-    print(os.getcwd())
-    print(nlq_file)
     df = pd.read_excel(nlq_file)
     return df
 
@@ -47,11 +45,9 @@ def run_our_rag_batch(ttl_path, nlq_file):
     for nlq in nlq_list:
         el = run_entity_matcher(nlq, node_id_mapping_path)
         nodes = list(el.values())
-        print(nodes)
         query, prompt, df_rdf = pipeline_ext(ttl_path, el, NLQ_TYPE.CQ, nlq, SUB_GRAPH_FILE)
-        print("----------")
         queries.append(query)
-        time.sleep(3)
+        time.sleep(1)
         
     save_queries(df, queries)
 
@@ -67,10 +63,7 @@ def run_our_rag(ttl_path, nlq):
     
     el = run_entity_matcher(nlq, node_id_mapping_path)
     nodes = list(el.values())
-    print(nodes)
     query, prompt, df_rdf = pipeline_ext(ttl_path, el, NLQ_TYPE.CQ, nlq, SUB_GRAPH_FILE)
-    print("----------")
-    time.sleep(3)
     
     return query
         
@@ -79,7 +72,7 @@ if __name__ == "__main__":
     
     ttl_path = "../inputs/saref_large.txt"
     nlq_file = "../inputs/competency_question.xlsx"
-    run_our_rag(ttl_path, nlq_file)
+    run_our_rag_batch_single(ttl_path, nlq_file)
     
 
 
