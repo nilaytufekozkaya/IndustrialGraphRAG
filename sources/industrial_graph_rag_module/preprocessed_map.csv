@@ -1,0 +1,543 @@
+subject_uri,subject_name,nodeid,browseName,label,synonyms,entity_types
+https://saref.etsi.org/saref4ener/AllowedLimitRange,AllowedLimitRange,<None>,<None>,Allowed_limit_range,<None>,http://www.w3.org/2000/01/rdf-schema/Class
+http://purl.org/dc/terms/contributor,contributor,<None>,<None>,contributor,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/created,created,<None>,<None>,created,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/creator,creator,<None>,<None>,creator,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/description,description,<None>,<None>,description,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/issued,issued,<None>,<None>,issued,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/license,license,<None>,<None>,license,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/modified,modified,<None>,<None>,modified,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/publisher,publisher,<None>,<None>,publisher,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/source,source,<None>,<None>,source,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/dc/terms/title,title,<None>,<None>,title,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/vocab/vann/preferredNamespacePrefix,preferredNamespacePrefix,<None>,<None>,preferredNamespacePrefix,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://purl.org/vocab/vann/preferredNamespaceUri,preferredNamespaceUri,<None>,<None>,preferredNamespaceUri,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2002/07/owl/maxCardinality,maxCardinality,<None>,<None>,maxCardinality,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2002/07/owl/minQualifiedCardinality,minQualifiedCardinality,<None>,<None>,minQualifiedCardinality,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2004/02/skos/core/example,example,<None>,<None>,example,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2004/02/skos/core/historyNote,historyNote,<None>,<None>,historyNote,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2004/02/skos/core/note,note,<None>,<None>,note,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2004/02/skos/core/scopeNote,scopeNote,<None>,<None>,scopeNote,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+https://w3id.org/saref/represents,represents,<None>,<None>,represents,<None>,http://www.w3.org/2002/07/owl/AnnotationProperty
+https://w3id.org/saref/Commodity,Commodity,<None>,<None>,Commodity,<None>,http://www.w3.org/2002/07/owl/Class; http://www.w3.org/2002/07/owl/AnnotationProperty
+http://www.w3.org/2001/XMLSchema/date,date,<None>,<None>,date,<None>,http://www.w3.org/2000/01/rdf-schema/Datatype
+https://saref.etsi.org/core/,core,<None>,<None>,core,<None>,http://www.w3.org/2002/07/owl/Ontology
+https://saref.etsi.org/saref4ener/,saref4ener,<None>,<None>,saref4ener,<None>,http://www.w3.org/2002/07/owl/Ontology
+https://saref.etsi.org/saref4inma/,saref4inma,<None>,<None>,saref4inma,<None>,http://www.w3.org/2002/07/owl/Ontology
+https://saref.etsi.org/core/Appliance,Appliance,<None>,<None>,Appliance,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/CommandExecution,CommandExecution,<None>,<None>,Command_Execution,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/Meter,Meter,<None>,<None>,Meter,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/OperationExecution,OperationExecution,<None>,<None>,Operation_Execution,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ActuatorLevel,ActuatorLevel,<None>,<None>,Actuator_level,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ActuatorSwitch,ActuatorSwitch,<None>,<None>,Actuator_switch,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EndInterruptionInstruction,EndInterruptionInstruction,<None>,<None>,End_Interruption_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EndTimeDurationDescription,EndTimeDurationDescription,<None>,<None>,End_time_duration_Description,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/LoadControlEventData,LoadControlEventData,<None>,<None>,Load_control_event_data,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/LoadControlStateData,LoadControlStateData,<None>,<None>,Load_control_state_data,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/OMBCInstruction,OMBCInstruction,<None>,<None>,Operation_Mode_Based_Control_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ScheduleInstruction,ScheduleInstruction,<None>,<None>,Schedule_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/StartInterruptionInstruction,StartInterruptionInstruction,<None>,<None>,Start_Interruption_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/Factory,Factory,<None>,<None>,Factory,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/Size,Size,<None>,<None>,Size,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4syst/System,System,<None>,<None>,System,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Temperature,Temperature,<None>,<None>,Temperature,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/TemperatureUnit,TemperatureUnit,<None>,<None>,Temperature_unit,<None>,http://www.w3.org/2002/07/owl/Class
+http://org.semanticweb.owlapi/error/Error1,Error1,<None>,<None>,Error1,<None>,http://www.w3.org/2002/07/owl/Class
+http://org.semanticweb.owlapi/error/Error4,Error4,<None>,<None>,Error4,<None>,http://www.w3.org/2002/07/owl/Class
+http://org.semanticweb.owlapi/error/Error5,Error5,<None>,<None>,Error5,<None>,http://www.w3.org/2002/07/owl/Class
+http://org.semanticweb.owlapi/error/Error6,Error6,<None>,<None>,Error6,<None>,http://www.w3.org/2002/07/owl/Class
+http://www.opengis.net/ont/geosparql/SpatialObject,SpatialObject,<None>,<None>,SpatialObject,<None>,http://www.w3.org/2002/07/owl/Class
+http://www.w3.org/2004/02/skos/core/ConceptScheme,ConceptScheme,<None>,<None>,Concept_Scheme,<None>,http://www.w3.org/2002/07/owl/Class
+http://www.w3.org/2006/time/DurationDescription,DurationDescription,<None>,<None>,DurationDescription,<None>,http://www.w3.org/2002/07/owl/Class
+http://www.w3.org/2006/time/TemporalPosition,TemporalPosition,<None>,<None>,TemporalPosition,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/Actuation,Actuation,<None>,<None>,Actuation,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4bldg/Building,Building,<None>,<None>,Building,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/DDBCInstruction,DDBCInstruction,<None>,<None>,Demand_Driven_Based_Control_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FRBCInstruction,FRBCInstruction,<None>,<None>,Fill_Rate_Based_Control_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FailsafeState,FailsafeState,<None>,<None>,Fail-safe_state,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FlexRequest,FlexRequest,<None>,<None>,Flex_request,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/GaussianDataPoint,GaussianDataPoint,<None>,<None>,Gaussian_data_point,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/IncentiveTableSlot,IncentiveTableSlot,<None>,<None>,Incentive_table_slot,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerSequenceElement,PowerSequenceElement,<None>,<None>,Power_sequence_element,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/Area,Area,<None>,<None>,Area,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/GTIN12ID,GTIN12ID,<None>,<None>,GTIN12ID,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/GTIN13ID,GTIN13ID,<None>,<None>,GTIN13ID,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/GTIN14ID,GTIN14ID,<None>,<None>,GTIN14ID,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/GTIN8ID,GTIN8ID,<None>,<None>,GTIN18ID,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/IRDI,IRDI,<None>,<None>,IRDI,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/MaterialBatch,MaterialBatch,<None>,<None>,Material_Batch,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/MaterialCategory,MaterialCategory,<None>,<None>,Material_category,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/ProductionEquipmentFunction,ProductionEquipmentFunction,<None>,<None>,Production_equipment_function,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/Site,Site,<None>,<None>,Site,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/UUID,UUID,<None>,<None>,UUID,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/WorkCenter,WorkCenter,<None>,<None>,Work_center,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Electricity,Electricity,<None>,<None>,Electricity,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Energy,Energy,<None>,<None>,Energy,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/FunctionRelated,FunctionRelated,<None>,<None>,Function_related,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/GetSensingDataCommand,GetSensingDataCommand,<None>,<None>,GetSensingDataCommand,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Measurement,Measurement,<None>,<None>,Measurement,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Power,Power,<None>,<None>,Power,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Profile,Profile,<None>,<None>,Profile,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/SensingFunction,SensingFunction,<None>,<None>,Sensing_function,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Sensor,Sensor,<None>,<None>,Sensor,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/StartState,StartState,<None>,<None>,StartState,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/StartStopState,StartStopState,<None>,<None>,StartStopState,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/State,State,<None>,<None>,State,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/TemperatureSensor,TemperatureSensor,<None>,<None>,Temperature_sensor,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/Observation,Observation,<None>,<None>,Observation,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4bldg/BuildingSpace,BuildingSpace,<None>,<None>,Building_space,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/AlternativesGroup,AlternativesGroup,<None>,<None>,Alternatives_group,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FillLevelTargetProfile,FillLevelTargetProfile,<None>,<None>,Fill_level_target_profile,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FillLevelTargetProfileElement,FillLevelTargetProfileElement,<None>,<None>,Fill_level_target_profile_element,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FillRateProfile,FillRateProfile,<None>,<None>,Fill_rate_control,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FlexOffer,FlexOffer,<None>,<None>,Flex_offer,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/IncentiveTableTier,IncentiveTableTier,<None>,<None>,Incentive_table_tier,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/LeakageBehaviour,LeakageBehaviour,<None>,<None>,Leakage_behaviour,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/LoadControlEventAction,LoadControlEventAction,<None>,<None>,Load_Control_event_action,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/LoadControlEventState,LoadControlEventState,<None>,<None>,Load_control_event_state_,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/OperationModeProfile,OperationModeProfile,<None>,<None>,Operation_mode_control,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PEBCInstruction,PEBCInstruction,<None>,<None>,Power_Envelop_Based_Control_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerPlan,PowerPlan,<None>,<None>,Power_plan,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerRange,PowerRange,<None>,<None>,Power_range,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/Item,Item,<None>,<None>,Item,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/ItemBatch,ItemBatch,<None>,<None>,Item_Batch,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/ItemCategory,ItemCategory,<None>,<None>,Item_category,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/ProductionEquipmentCategory,ProductionEquipmentCategory,<None>,<None>,Production_equipment_category,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Command,Command,<None>,<None>,Command,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Function,Function,<None>,<None>,Function,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Service,Service,<None>,<None>,Service,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/StartCommand,StartCommand,<None>,<None>,Start_command,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Task,Task,<None>,<None>,Task,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/UnitOfMeasure,UnitOfMeasure,<None>,<None>,UnitOfMeasure,<None>,http://www.w3.org/2002/07/owl/Class
+http://www.w3.org/2006/time/Interval,Interval,<None>,<None>,Interval,<None>,http://www.w3.org/2002/07/owl/Class
+http://www.w3.org/2006/time/TemporalEntity,TemporalEntity,<None>,<None>,TemporalEntity,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/StateValue,StateValue,<None>,<None>,State_Value,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ContractualPowerLimit,ContractualPowerLimit,<None>,<None>,Contractual_Power_Limit,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/DemandDrivenProfile,DemandDrivenProfile,<None>,<None>,Demand_driven_control,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FailsafePowerLimit,FailsafePowerLimit,<None>,<None>,Failsafe_Power_Limit,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Incentive,Incentive,<None>,<None>,Incentive,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/LeakageBehaviourElement,LeakageBehaviourElement,<None>,<None>,Leakage_behaviour_element,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/NominalPowerLimit,NominalPowerLimit,<None>,<None>,Nominal_Power_Limit,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerConstraint,PowerConstraint,<None>,<None>,Power_constraint,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerEnvelope,PowerEnvelope,<None>,<None>,Power_Envelope,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerEnvelopeConsequenceType,PowerEnvelopeConsequenceType,<None>,<None>,Power_Envelope_Consequence_Type,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerEnvelopeLimitType,PowerEnvelopeLimitType,<None>,<None>,Power_Envelope_Limit_Type,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerEnvelopeProfile,PowerEnvelopeProfile,<None>,<None>,Power_envelope_control,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerProfile,PowerProfile,<None>,<None>,Power_profile_control,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Role,Role,<None>,<None>,Role,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Slot,Slot,<None>,<None>,Slot,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/Batch,Batch,<None>,<None>,Batch,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Device,Device,<None>,<None>,Device,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/IncentiveTableProfile,IncentiveTableProfile,<None>,<None>,Incentive_table_based_profile,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/InterruptionInstruction,InterruptionInstruction,<None>,<None>,Interruption_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerLimitProfile,PowerLimitProfile,<None>,<None>,Power_limit_profile,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/RoleType,RoleType,<None>,<None>,Role_Type,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ScopeType,ScopeType,<None>,<None>,Scope_Type,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Timer,Timer,<None>,<None>,Timer,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ValueSource,ValueSource,<None>,<None>,Value_source,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/ValueTendency,ValueTendency,<None>,<None>,Value_tendency,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/ProductionEquipment,ProductionEquipment,<None>,<None>,ProductionEquipment,<None>,http://www.w3.org/2002/07/owl/Class
+https://w3id.org/saref/Property,Property,<None>,<None>,Property,<None>,http://www.w3.org/2002/07/owl/Class
+http://xmlns.com/foaf/0.1/Agent,Agent,<None>,<None>,Agent,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EnergyConstraint,EnergyConstraint,<None>,<None>,Energy_Constraint,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/IncentiveType,IncentiveType,<None>,<None>,Incentive_Type,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/OperationModeElement,OperationModeElement,<None>,<None>,Operation_Mode_Element,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PPBCInstruction,PPBCInstruction,<None>,<None>,Power_Profile_Based_Control_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerSequenceContainer,PowerSequenceContainer,<None>,<None>,Power_profile_container,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerSource,PowerSource,<None>,<None>,Power_source,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerSequenceStatus,PowerSequenceStatus,<None>,<None>,Power_sequence_status,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Storage,Storage,<None>,<None>,Storage,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/Operation,Operation,<None>,<None>,Operation,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EventStateConsume,EventStateConsume,<None>,<None>,Event_state_consume,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EventStateProduce,EventStateProduce,<None>,<None>,Event_state_produce,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Transition,Transition,<None>,<None>,Transition,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EventActionConsume,EventActionConsume,<None>,<None>,Event_action_consume,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/EventActionProduce,EventActionProduce,<None>,<None>,Event_action_produce,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FlexibilityProfile,FlexibilityProfile,<None>,<None>,Flexibility_Profile,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/InstructionStatus,InstructionStatus,<None>,<None>,Instruction_Status,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/PropertyOfInterest,PropertyOfInterest,<None>,<None>,Property_of_Interest,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/FlexibilityInstruction,FlexibilityInstruction,<None>,<None>,Flexibility_Instruction,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/NumberRange,NumberRange,<None>,<None>,Number_range,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerSequenceState,PowerSequenceState,<None>,<None>,Power_sequence_state,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/TimeSeries,TimeSeries,<None>,<None>,Time_Series,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/Actuator,Actuator,<None>,<None>,Actuator,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/StateOfInterest,StateOfInterest,<None>,<None>,State_of_Interest,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerLimit,PowerLimit,<None>,<None>,Power_Limit,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/DataPoint,DataPoint,<None>,<None>,Data_point,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4inma/ID,ID,<None>,<None>,Identifier,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/FunctionOfInterest,FunctionOfInterest,<None>,<None>,Function_of_Interest,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/Property,Property,<None>,<None>,Property,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/OperationMode,OperationMode,<None>,<None>,Operation_Mode,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/PowerSequence,PowerSequence,<None>,<None>,Power_sequence,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/CommandOfInterest,CommandOfInterest,<None>,<None>,Command_Of_Interest,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/DeviceKind,DeviceKind,<None>,<None>,Device_kinds,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/ProcedureExecution,ProcedureExecution,<None>,<None>,Procedure_Execution,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/saref4ener/Usage,Usage,<None>,<None>,Usage,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/PropertyValue,PropertyValue,<None>,<None>,Property_Value,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/FeatureKind,FeatureKind,<None>,<None>,Feature_kinds,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/FeatureOfInterest,FeatureOfInterest,<None>,<None>,Feature_of_interest,<None>,http://www.w3.org/2002/07/owl/Class
+https://saref.etsi.org/core/hasApplicableTime,hasApplicableTime,<None>,<None>,has_applicable_time,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasDeviceKind,hasDeviceKind,<None>,<None>,has_device_kind,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasInput,hasInput,<None>,<None>,has_input,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasOptionalCommand,hasOptionalCommand,<None>,<None>,has_optional_command,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasOutput,hasOutput,<None>,<None>,has_output,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasPhenomenonTime,hasPhenomenonTime,<None>,<None>,has_phenomenon_time,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasPrice,hasPrice,<None>,<None>,hasPrice,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasResult,hasResult,<None>,<None>,has_result,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isCommandOfInterestOf,isCommandOfInterestOf,<None>,<None>,is_command_of_interest_of,<None>,http://www.w3.org/2002/07/owl/FunctionalProperty; http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isFunctionOf,isFunctionOf,<None>,<None>,is_function_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isOfferedBy,isOfferedBy,<None>,<None>,is_offered_by,<None>,http://www.w3.org/2002/07/owl/FunctionalProperty; http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isProfileOf,isProfileOf,<None>,<None>,is_profile_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isStateOf,isStateOf,<None>,<None>,is_state_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/profileHasPrice,profileHasPrice,<None>,<None>,has_price,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/whenPropertyValue,whenPropertyValue,<None>,<None>,when_property_value,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/whenState,whenState,<None>,<None>,when_state,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/allowedLimitRange,allowedLimitRange,<None>,<None>,allowed_limit_range,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/belongsTo,belongsTo,<None>,<None>,belongs_to,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/belongsToTimeSeries,belongsToTimeSeries,<None>,<None>,belongs_to_time_series,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/endOfRange,endOfRange,<None>,<None>,end_of_range,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/fillRate,fillRate,<None>,<None>,Fill_Rate_Level,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/fromOperationMode,fromOperationMode,<None>,<None>,from_operation_mode,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasActiveOperationMode,hasActiveOperationMode,<None>,<None>,has_active_operation_mode,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasAppliedEventActionConsume,hasAppliedEventActionConsume,<None>,<None>,has_applied_event_action_consume,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasAppliedEventActionProduce,hasAppliedEventActionProduce,<None>,<None>,has_applied_event_action_produce,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasCommodity,hasCommodity,<None>,<None>,Uses_commodity,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasConsequenceType,hasConsequenceType,<None>,<None>,Has_Consequence_Type,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasConstraints,hasConstraints,<None>,<None>,has_constraints,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasContractualConsumptionMax,hasContractualConsumptionMax,<None>,<None>,has_contractual_consumption_Max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasContractualProductionMax,hasContractualProductionMax,<None>,<None>,has_contractual_production_Max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasCost,hasCost,<None>,<None>,has_cost,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasDemandRate,hasDemandRate,<None>,<None>,has_demand_rate,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasDemandRateForecast,hasDemandRateForecast,<None>,<None>,has_average_demand_rate_forecast,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasDevice,hasDevice,<None>,<None>,has_device,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasEffectivePeriod,hasEffectivePeriod,<None>,<None>,has_effective_period,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasElapsedSlotTime,hasElapsedSlotTime,<None>,<None>,has_elapsed_slot_time,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasEnergy,hasEnergy,<None>,<None>,has_energy,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasEnvelope,hasEnvelope,<None>,<None>,has_envelope,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasEventStateConsume,hasEventStateConsume,<None>,<None>,has_event_state_consume,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasEventStateProduce,hasEventStateProduce,<None>,<None>,has_event_state_produce,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasFailsafeConsumptionMax,hasFailsafeConsumptionMax,<None>,<None>,has_failsafe_consumption_max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasFailsafeProductionMax,hasFailsafeProductionMax,<None>,<None>,has_failsafe_production_max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasFillLevelRange,hasFillLevelRange,<None>,<None>,Fill_Level_Range,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasFillLevelTargetProfile,hasFillLevelTargetProfile,<None>,<None>,has_fill_level_target_profile,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasFillLevelTargetProfileElement,hasFillLevelTargetProfileElement,<None>,<None>,has_fill_level_target_profile_element,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasIncentive,hasIncentive,<None>,<None>,has_incentive,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasIncentiveType,hasIncentiveType,<None>,<None>,has_incentive_type,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasInstructionStatus,hasInstructionStatus,<None>,<None>,has_Instruction_Status,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasLeakageBehaviour,hasLeakageBehaviour,<None>,<None>,has_leakage_behaviour,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasLeakageBehaviourElement,hasLeakageBehaviourElement,<None>,<None>,has_leakage_behaviour_element,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasLowerBoundary,hasLowerBoundary,<None>,<None>,has_lower_boundary,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasNominalConsumption,hasNominalConsumption,<None>,<None>,has_nominal_consumption_Max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasNominalProduction,hasNominalProduction,<None>,<None>,has_nominal_production_Max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasNumberRange,hasNumberRange,<None>,<None>,has_number_range,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasOperationMode,hasOperationMode,<None>,<None>,has_Operation_Modes,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasOperationModeElement,hasOperationModeElement,<None>,<None>,Has_Operation_Mode_Element,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerEnvelope,hasPowerEnvelope,<None>,<None>,has_power_envelope,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerEnvelopeElement,hasPowerEnvelopeElement,<None>,<None>,has_power_envelope_element,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerLimitState,hasPowerLimitState,<None>,<None>,has_power_limit_state,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerPlan,hasPowerPlan,<None>,<None>,has_power_plan,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerRange,hasPowerRange,<None>,<None>,has_power_ranges,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerSequence,hasPowerSequence,<None>,<None>,has_power_sequence,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerSequenceContainer,hasPowerSequenceContainer,<None>,<None>,has_power_sequence_container,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerSequenceElement,hasPowerSequenceElement,<None>,<None>,has_power_sequence_element,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerSequenceStatus,hasPowerSequenceStatus,<None>,<None>,has_power_sequence_status,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerSource,hasPowerSource,<None>,<None>,Power_source,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPreviousOperationMode,hasPreviousOperationMode,<None>,<None>,has_previous_operation_mode,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasRecipient,hasRecipient,<None>,<None>,has_recipient,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasResumeCostEstimated,hasResumeCostEstimated,<None>,<None>,Resume_cost_estimated,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasResumeEnergyEstimated,hasResumeEnergyEstimated,<None>,<None>,Resume_energy_estimated,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasRole,hasRole,<None>,<None>,performs_role,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasRoleType,hasRoleType,<None>,<None>,role_type,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasRunningCosts,hasRunningCosts,<None>,<None>,has_running_costs,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasScopeType,hasScopeType,<None>,<None>,has_scope_type,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasSlotValue,hasSlotValue,<None>,<None>,has_slot_value,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasStorage,hasStorage,<None>,<None>,has_storage,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasSupplyRange,hasSupplyRange,<None>,<None>,Has_Supply_Range,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasTier,hasTier,<None>,<None>,has_tier_incentive,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasTimer,hasTimer,<None>,<None>,Has_Timer,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasTransition,hasTransition,<None>,<None>,has_transition,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasUpperBoundary,hasUpperBoundary,<None>,<None>,has_upper_boundary,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasUsage,hasUsage,<None>,<None>,has_usage,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasUsageForecast,hasUsageForecast,<None>,<None>,Has_Usage_Forecast,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasValueSource,hasValueSource,<None>,<None>,has_value_source,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/includes,includes,<None>,<None>,includes,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/isActuatedBy,isActuatedBy,<None>,<None>,is_actuated_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/isBlockedBy,isBlockedBy,<None>,<None>,is_blocked_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/isBoundTo,isBoundTo,<None>,<None>,is_bound_to,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/isLimitedWith,isLimitedWith,<None>,<None>,is_limited_with,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/isProtectedBy,isProtectedBy,<None>,<None>,is_protected_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/leakageRate,leakageRate,<None>,<None>,Leakage_Rate,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/limitType,limitType,<None>,<None>,Limit_Type,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/presentFillLevel,presentFillLevel,<None>,<None>,present_fill_level,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/producedBy,producedBy,<None>,<None>,produced_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/rangeBoundary,rangeBoundary,<None>,<None>,range_boundary,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/receives,receives,<None>,<None>,receives,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/receivesPowerLimit,receivesPowerLimit,<None>,<None>,receives_power_limit,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/relatesToCommodity,relatesToCommodity,<None>,<None>,relates_to_commodity_quantity,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/relatesToOffer,relatesToOffer,<None>,<None>,relates_to_offer,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/relatesToPowerProfile,relatesToPowerProfile,<None>,<None>,Relates_to_power_profile,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/relatesToPowerProfileSequence,relatesToPowerProfileSequence,<None>,<None>,Relates_to_power_profile_sequence,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/relatesToPowerProfileSequenceContainer,relatesToPowerProfileSequenceContainer,<None>,<None>,Relates_to_power_profile_sequence_container,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/relatesToRequest,relatesToRequest,<None>,<None>,relates_to_request,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/startOfRange,startOfRange,<None>,<None>,start_of_range,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/startsTimer,startsTimer,<None>,<None>,Starts_Timer,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/toOperationMode,toOperationMode,<None>,<None>,to_state_operation_mode,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/triggersEventActionConsume,triggersEventActionConsume,<None>,<None>,triggers_event_action_consume,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/triggersEventActionProduce,triggersEventActionProduce,<None>,<None>,triggers_event_action_produce,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/valueTendency,valueTendency,<None>,<None>,value_tendency,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/belongsToCategory,belongsToCategory,<None>,<None>,belongs_to_category,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/containsItem,containsItem,<None>,<None>,contains_item,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasGTIN12ID,hasGTIN12ID,<None>,<None>,has_GTIN12ID_,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasGTIN13ID,hasGTIN13ID,<None>,<None>,has_GTIN13ID,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasGTIN14ID,hasGTIN14ID,<None>,<None>,has_GTIN14ID,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasGTIN8ID,hasGTIN8ID,<None>,<None>,has_GTIN8ID,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasIRDI,hasIRDI,<None>,<None>,has_IRDI,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasSize,hasSize,<None>,<None>,has_size,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasUUID,hasUUID,<None>,<None>,has_UUID,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasUpdate,hasUpdate,<None>,<None>,has_update,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/isProducedBy,isProducedBy,<None>,<None>,is_produced_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/needsEquipment,needsEquipment,<None>,<None>,needs_equipment,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/accomplishes,accomplishes,<None>,<None>,accomplishes,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/actsUpon,actsUpon,<None>,<None>,actsUpon,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/consistsOf,consistsOf,<None>,<None>,consistsOf,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/controlsProperty,controlsProperty,<None>,<None>,controlsProperty,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasCommand,hasCommand,<None>,<None>,has_command,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasFunction,hasFunction,<None>,<None>,has_function,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasProfile,hasProfile,<None>,<None>,hasProfile,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasSensingRange,hasSensingRange,<None>,<None>,hasSensingRange,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasSensorType,hasSensorType,<None>,<None>,hasSensorType,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasState,hasState,<None>,<None>,hasState,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/hasTypicalConsumption,hasTypicalConsumption,<None>,<None>,hasTypicalConsumption,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/isMeasuredIn,isMeasuredIn,<None>,<None>,isMeasuredIn,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/isUsedFor,isUsedFor,<None>,<None>,is_used_for,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/makesMeasurement,makesMeasurement,<None>,<None>,makesMeasurement,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/measuresProperty,measuresProperty,<None>,<None>,measuresProperty,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/offers,offers,<None>,<None>,offers,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+http://www.w3.org/2004/02/skos/core/narrower,narrower,<None>,<None>,narrower,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/consumes,consumes,<None>,<None>,consumes,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/controls,controls,<None>,<None>,controls,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasFunctionKind,hasFunctionKind,<None>,<None>,has_function_kind,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasFunctionOfInterest,hasFunctionOfInterest,<None>,<None>,has_function_of_interest,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasMandatoryCommand,hasMandatoryCommand,<None>,<None>,has_mandatory_command,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasOperation,hasOperation,<None>,<None>,has_operation,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasStateOfInterest,hasStateOfInterest,<None>,<None>,has_state_of_interest,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasStateValue,hasStateValue,<None>,<None>,has_state_value,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isConsumedBy,isConsumedBy,<None>,<None>,is_consumed_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isControlledBy,isControlledBy,<None>,<None>,is_controlled_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isFunctionOfInterestOf,isFunctionOfInterestOf,<None>,<None>,is_function_of_interest_of,<None>,http://www.w3.org/2002/07/owl/FunctionalProperty; http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isObservedBy,isObservedBy,<None>,<None>,is_observed_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isOperationOf,isOperationOf,<None>,<None>,is_operation_of,<None>,http://www.w3.org/2002/07/owl/FunctionalProperty; http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isProducedBy,isProducedBy,<None>,<None>,is_produced_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isPropertyOf,isPropertyOf,<None>,<None>,is_property_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isPropertyOfInterestOf,isPropertyOfInterestOf,<None>,<None>,is_property_of_interest_of,<None>,http://www.w3.org/2002/07/owl/FunctionalProperty; http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isStateOfInterestOf,isStateOfInterestOf,<None>,<None>,is_state_of_interest_of,<None>,http://www.w3.org/2002/07/owl/FunctionalProperty; http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isStoredBy,isStoredBy,<None>,<None>,is_stored_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isValueOfProperty,isValueOfProperty,<None>,<None>,is_value_of_property,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isValueOfState,isValueOfState,<None>,<None>,is_value_of_state,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/madeBy,madeBy,<None>,<None>,made_by,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/madeExecution,madeExecution,<None>,<None>,made_execution,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/observes,observes,<None>,<None>,observes,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/produces,produces,<None>,<None>,produces,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/stores,stores,<None>,<None>,stores,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasDataPoint,hasDataPoint,<None>,<None>,has_data_point,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/belongsToItemBatch,belongsToItemBatch,<None>,<None>,is_created_in,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/isCategoryOf,isCategoryOf,<None>,<None>,is_category_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/produces,produces,<None>,<None>,produces,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/isAccomplishedBy,isAccomplishedBy,<None>,<None>,isAccomplishedBy,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://w3id.org/saref/isCommandOf,isCommandOf,<None>,<None>,isCommandOf,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasCommandKind,hasCommandKind,<None>,<None>,has_command_kind,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasPropertyOfInterest,hasPropertyOfInterest,<None>,<None>,has_property_of_interest,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasStateKind,hasStateKind,<None>,<None>,has_state_kind,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isExecutionOf,isExecutionOf,<None>,<None>,is_execution_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/isTargetOf,isTargetOf,<None>,<None>,is_target_of,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasFeatureKind,hasFeatureKind,<None>,<None>,has_feature_kind,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasPropertyKind,hasPropertyKind,<None>,<None>,has_property_kind,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasPropertyValue,hasPropertyValue,<None>,<None>,has_property_value,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/targets,targets,<None>,<None>,targets,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerLimitConsumptionMax,hasPowerLimitConsumptionMax,<None>,<None>,has_power_limit_consumption_Max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4ener/hasPowerLimitProductionMax,hasPowerLimitProductionMax,<None>,<None>,has_power_limit_production_Max,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasProperty,hasProperty,<None>,<None>,has_property,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/saref4inma/hasIdentifier,hasIdentifier,<None>,<None>,has_identifier,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+http://www.w3.org/2004/02/skos/core/broader,broader,<None>,<None>,broader,<None>,http://www.w3.org/2002/07/owl/ObjectProperty
+https://saref.etsi.org/core/hasResultTime,hasResultTime,<None>,<None>,has_result_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/core/hasRevisionNumber,hasRevisionNumber,<None>,<None>,has_revision_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/core/hasValue,hasValue,<None>,<None>,has_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/core/hasVersion,hasVersion,<None>,<None>,has_version,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/abnormalCondition,abnormalCondition,<None>,<None>,abnormal_condition,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/abnormalConditionOnly,abnormalConditionOnly,<None>,<None>,Abnormal_Condition_Only,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/activateSlot,activateSlot,<None>,<None>,activate_slot,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/activeRepetitionNumber,activeRepetitionNumber,<None>,<None>,active_repetition_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/activeSlotNumber,activeSlotNumber,<None>,<None>,active_slot_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/brandName,brandName,<None>,<None>,brand_name,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/cheapest,cheapest,<None>,<None>,cheapest,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/deviceCode,deviceCode,<None>,<None>,device_code,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/deviceName,deviceName,<None>,<None>,device_name,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/firmwareVersion,firmwareVersion,<None>,<None>,has_firmware_version,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/greenest,greenest,<None>,<None>,greenest,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hardwareRevision,hardwareRevision,<None>,<None>,hardware_revision_,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasActivationDelay,hasActivationDelay,<None>,<None>,has_activation_delay,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasActiveDurationMax,hasActiveDurationMax,<None>,<None>,has_active_duration_max,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasActiveDurationMin,hasActiveDurationMin,<None>,<None>,has_active_duration_min,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasActiveDurationSumMax,hasActiveDurationSumMax,<None>,<None>,has_active_duration_sum_max,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasActiveDurationSumMin,hasActiveDurationSumMin,<None>,<None>,has_active_duration_sum_min,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasCreationTime,hasCreationTime,<None>,<None>,has_creation_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasDefaultDuration,hasDefaultDuration,<None>,<None>,has_default_duration,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasDurationMin,hasDurationMin,<None>,<None>,duration_minimum,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasDurationUncertainty,hasDurationUncertainty,<None>,<None>,Duration_uncertainty,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasEarliestStartTime,hasEarliestStartTime,<None>,<None>,has_earliest_start_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasEndTime,hasEndTime,<None>,<None>,end_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasExecutionTime,hasExecutionTime,<None>,<None>,has_execution_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasFailsafeDuration,hasFailsafeDuration,<None>,<None>,has_failsafe_duration,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasIndex,hasIndex,<None>,<None>,has_index,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasInterruptionEndTime,hasInterruptionEndTime,<None>,<None>,has_end_time_Interruption,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasInterruptionStartTime,hasInterruptionStartTime,<None>,<None>,Has_Interruption_Start_Time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasLatestEndTime,hasLatestEndTime,<None>,<None>,has_latest_end_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasLowerAveragePower,hasLowerAveragePower,<None>,<None>,has_lower_average_power,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasManufacturerNodeIdentification,hasManufacturerNodeIdentification,<None>,<None>,has_manufacturer_node_identification,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasMaxDuration,hasMaxDuration,<None>,<None>,has_max_duration,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasMaxPauseBefore,hasMaxPauseBefore,<None>,<None>,max_pause_before,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasMinDuration,hasMinDuration,<None>,<None>,has_min_duration,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasOperationModeFactor,hasOperationModeFactor,<None>,<None>,Has_Operation_Mode_Factor,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasPauseDurationMax,hasPauseDurationMax,<None>,<None>,has_pause_duration_max,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasPauseDurationMin,hasPauseDurationMin,<None>,<None>,has_pause_duration_min,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasPowerLimitDuration,hasPowerLimitDuration,<None>,<None>,has_power_limit_duration,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasQuantile,hasQuantile,<None>,<None>,has_quantile,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasRemainingPauseTime,hasRemainingPauseTime,<None>,<None>,has_remaining_pause_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasRemainingSlotTime,hasRemainingSlotTime,<None>,<None>,has_remaining_slot_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasStandardDeviation,hasStandardDeviation,<None>,<None>,has_standard_deviation,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasStartTime,hasStartTime,<None>,<None>,has_start_time,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasTaskIdentifier,hasTaskIdentifier,<None>,<None>,has_task_identifier,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasTemporalResolution,hasTemporalResolution,<None>,<None>,has_temporal_resolution,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasTransitionCosts,hasTransitionCosts,<None>,<None>,has_transition_costs,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasTransitionDuration,hasTransitionDuration,<None>,<None>,Transition_Duration,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasTransitionTimestamp,hasTransitionTimestamp,<None>,<None>,transition_Timestamp,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasUpdateRate,hasUpdateRate,<None>,<None>,has_update_rate,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasUpperAveragePower,hasUpperAveragePower,<None>,<None>,has_upper_average_power,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasValue,hasValue,<None>,<None>,has_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isActive,isActive,<None>,<None>,is_active,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isChangeable,isChangeable,<None>,<None>,is_changeable,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isFinishedAt,isFinishedAt,<None>,<None>,is_finished_at,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isInterruptible,isInterruptible,<None>,<None>,is_interruptible,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isObligatory,isObligatory,<None>,<None>,is_obligatory,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isPausable,isPausable,<None>,<None>,is_pausable,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isStoppable,isStoppable,<None>,<None>,is_stoppable,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/isWritable,isWritable,<None>,<None>,is_writable,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/maxCyclesPerDay,maxCyclesPerDay,<None>,<None>,max_cycles_per_day,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/nodeRemoteControllable,nodeRemoteControllable,<None>,<None>,node_remote_controllable,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/optionalSlot,optionalSlot,<None>,<None>,optional_slot,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/progress,progress,<None>,<None>,progress,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/repetitionsTotal,repetitionsTotal,<None>,<None>,repetition_total,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/requiresUpdate,requiresUpdate,<None>,<None>,requiresUpdate,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/sequenceRemoteControllable,sequenceRemoteControllable,<None>,<None>,sequence_remote_controllable,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/serialNumber,serialNumber,<None>,<None>,serial_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/slotActivated,slotActivated,<None>,<None>,slot_activated,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/slotNumber,slotNumber,<None>,<None>,slot_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/softwareRevision,softwareRevision,<None>,<None>,software_revision,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/supportsReselection,supportsReselection,<None>,<None>,supports_reselection,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/supportsSingleSlotSchedulingOnly,supportsSingleSlotSchedulingOnly,<None>,<None>,supports_single_slot_scheduling_only,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/totalSequencesCountMax,totalSequencesCountMax,<None>,<None>,total_sequences_count_max,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/vendorCode,vendorCode,<None>,<None>,vendor_code,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/vendorName,vendorName,<None>,<None>,vendor_name,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasCertificate,hasCertificate,<None>,<None>,has_certificate,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasGTIN12IDValue,hasGTIN12IDValue,<None>,<None>,has_GTIN12ID_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasGTIN13IDValue,hasGTIN13IDValue,<None>,<None>,has_GTIN13ID_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasGTIN14IDValue,hasGTIN14IDValue,<None>,<None>,has_GTIN14ID_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasGTIN8IDValue,hasGTIN8IDValue,<None>,<None>,has_GTIN8ID_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasIRDIValue,hasIRDIValue,<None>,<None>,has_IRDI_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasModelNumber,hasModelNumber,<None>,<None>,has_model_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasSerialNumber,hasSerialNumber,<None>,<None>,has_serial_number,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasUUIDValue,hasUUIDValue,<None>,<None>,has_UUID_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://w3id.org/saref/hasManufacturer,hasManufacturer,<None>,<None>,has_manufacturer,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://w3id.org/saref/hasModel,hasModel,<None>,<None>,has_model,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/core/hasIdentifier,hasIdentifier,<None>,<None>,has_identifier,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4inma/hasIDValue,hasIDValue,<None>,<None>,has_identifier_value,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/core/hasTimestamp,hasTimestamp,<None>,<None>,has_timestamp,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/hasDuration,hasDuration,<None>,<None>,duration_in_xsd_,<None>,http://www.w3.org/2002/07/owl/DatatypeProperty
+https://saref.etsi.org/saref4ener/Aborted,Aborted,<None>,<None>,Aborted,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; https://saref.etsi.org/saref4ener/PowerSequenceStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/AbsoluteCost,AbsoluteCost,<None>,<None>,Absolute_cost,<None>,https://saref.etsi.org/saref4ener/IncentiveType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Accepted,Accepted,<None>,<None>,Accepted,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Average,Average,<None>,<None>,Average,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/BaseLine,BaseLine,<None>,<None>,Baseline,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/CO2Emission,CO2Emission,<None>,<None>,CO2_Emission,<None>,https://saref.etsi.org/saref4ener/IncentiveType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Committed,Committed,<None>,<None>,Committed,<None>,https://saref.etsi.org/saref4ener/ScopeType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Completed,Completed,<None>,<None>,Completed,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Consumption,Consumption,<None>,<None>,Consumption,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Defer,Defer,<None>,<None>,Defer,<None>,https://saref.etsi.org/saref4ener/PowerEnvelopeConsequenceType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Downflex,Downflex,<None>,<None>,Downflex,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EnergyConsumer,EnergyConsumer,<None>,<None>,Energy_Consumer,<None>,https://saref.etsi.org/saref4ener/RoleType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EnergyProducer,EnergyProducer,<None>,<None>,Energy_Producer,<None>,https://saref.etsi.org/saref4ener/RoleType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EnergyStorage,EnergyStorage,<None>,<None>,Energy_Storage,<None>,https://saref.etsi.org/saref4ener/RoleType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Inactive,Inactive,<None>,<None>,Inactive,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Invalid,Invalid,<None>,<None>,Invalid,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/LowerLimit,LowerLimit,<None>,<None>,Lower_Limit,<None>,https://saref.etsi.org/saref4ener/PowerEnvelopeLimitType; https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Maximum,Maximum,<None>,<None>,Maximum,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Minimum,Minimum,<None>,<None>,Minimum,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/New,New,<None>,<None>,New,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Paused,Paused,<None>,<None>,Paused,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Pending,Pending,<None>,<None>,Pending,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Preliminary,Preliminary,<None>,<None>,Preliminary,<None>,https://saref.etsi.org/saref4ener/ScopeType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Production,Production,<None>,<None>,Production,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Rejected,Rejected,<None>,<None>,Rejected,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/RelativeCost,RelativeCost,<None>,<None>,Relative_cost,<None>,https://saref.etsi.org/saref4ener/IncentiveType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/RenewableEnergyPercentage,RenewableEnergyPercentage,<None>,<None>,Renewable_energy_percentage,<None>,https://saref.etsi.org/saref4ener/IncentiveType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Revoked,Revoked,<None>,<None>,Revoked,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Running,Running,<None>,<None>,Running,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Scheduled,Scheduled,<None>,<None>,Scheduled,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/ScheduledPaused,ScheduledPaused,<None>,<None>,Scheduled_paused,<None>,https://saref.etsi.org/saref4ener/PowerSequenceState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/SetPoint,SetPoint,<None>,<None>,Setpoint,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Skewness,Skewness,<None>,<None>,Skewness,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Started,Started,<None>,<None>,Started,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Succeeded,Succeeded,<None>,<None>,Succeeded,<None>,https://saref.etsi.org/saref4ener/InstructionStatus; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Upflex,Upflex,<None>,<None>,Upflex,<None>,https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/UpperLimit,UpperLimit,<None>,<None>,Upper_Limit,<None>,https://saref.etsi.org/saref4ener/PowerEnvelopeLimitType; https://saref.etsi.org/saref4ener/Usage; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Vanish,Vanish,<None>,<None>,Vanish,<None>,https://saref.etsi.org/saref4ener/PowerEnvelopeConsequenceType; http://www.w3.org/2002/07/owl/NamedIndividual
+https://w3id.org/saref/Start,Start,<None>,<None>,Start,<None>,https://w3id.org/saref/StartCommand; http://www.w3.org/2002/07/owl/NamedIndividual
+https://w3id.org/saref/TempSensInst,TempSensInst,<None>,<None>,TempSensInst,<None>,https://w3id.org/saref/TemperatureSensor; http://www.w3.org/2002/07/owl/NamedIndividual
+https://w3id.org/saref/Read_Temp,Read_Temp,<None>,<None>,Read_Temp,<None>,https://w3id.org/saref/Service; http://www.w3.org/2002/07/owl/NamedIndividual
+https://www.linkedin.com/in/ana%C3%AFs-walle-050baa159/,anaïs-walle-050baa159,<None>,<None>,Anais_Walle,<None>,http://www.w3.org/2002/07/owl/NamedIndividual
+https://www.linkedin.com/in/george-hallak-368301157/,george-hallak-368301157,<None>,<None>,George_Hallak,<None>,http://www.w3.org/2002/07/owl/NamedIndividual
+https://www.linkedin.com/in/georgjung/,georgjung,<None>,<None>,Georg_Jung,<None>,http://www.w3.org/2002/07/owl/NamedIndividual
+https://www.linkedin.com/in/josef-baumeister-a221422/,josef-baumeister-a221422,<None>,<None>,Josef_Baumeister,<None>,http://www.w3.org/2002/07/owl/NamedIndividual
+https://www.linkedin.com/in/wilco-wijbrandi-3994ab4b/,wilco-wijbrandi-3994ab4b,<None>,<None>,Wilco_Wijbrandi,<None>,http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Emergency,Emergency,<None>,<None>,Emergency,<None>,https://saref.etsi.org/saref4ener/EventActionProduce; https://saref.etsi.org/saref4ener/EventActionConsume; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EventAccepted,EventAccepted,<None>,<None>,Event_accepted,<None>,https://saref.etsi.org/saref4ener/EventStateConsume; https://saref.etsi.org/saref4ener/EventStateProduce; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EventCancelled,EventCancelled,<None>,<None>,Event_cancelled,<None>,https://saref.etsi.org/saref4ener/EventStateConsume; https://saref.etsi.org/saref4ener/EventStateProduce; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EventError,EventError,<None>,<None>,Event_error,<None>,https://saref.etsi.org/saref4ener/EventStateConsume; https://saref.etsi.org/saref4ener/EventStateProduce; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EventRejected,EventRejected,<None>,<None>,Event_rejected,<None>,https://saref.etsi.org/saref4ener/EventStateConsume; https://saref.etsi.org/saref4ener/EventStateProduce; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EventStarted,EventStarted,<None>,<None>,Event_started,<None>,https://saref.etsi.org/saref4ener/EventStateConsume; https://saref.etsi.org/saref4ener/EventStateProduce; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/EventStopped,EventStopped,<None>,<None>,Event_stopped,<None>,https://saref.etsi.org/saref4ener/EventStateConsume; https://saref.etsi.org/saref4ener/EventStateProduce; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Increase,Increase,<None>,<None>,Increase,<None>,https://saref.etsi.org/saref4ener/EventActionProduce; https://saref.etsi.org/saref4ener/EventActionConsume; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Normal,Normal,<None>,<None>,Normal,<None>,https://saref.etsi.org/saref4ener/EventActionProduce; https://saref.etsi.org/saref4ener/EventActionConsume; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Pause,Pause,<None>,<None>,Pause,<None>,https://saref.etsi.org/saref4ener/EventActionProduce; https://saref.etsi.org/saref4ener/EventActionConsume; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Reduce,Reduce,<None>,<None>,Reduce,<None>,https://saref.etsi.org/saref4ener/EventActionProduce; https://saref.etsi.org/saref4ener/EventActionConsume; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Resume,Resume,<None>,<None>,Resume,<None>,https://saref.etsi.org/saref4ener/EventActionProduce; https://saref.etsi.org/saref4ener/EventActionConsume; http://www.w3.org/2002/07/owl/NamedIndividual
+https://w3id.org/saref/Comfort,Comfort,<None>,<None>,Comfort,<None>,https://w3id.org/saref/Task; http://www.w3.org/2002/07/owl/NamedIndividual
+https://w3id.org/saref/Start_s,Start_s,<None>,<None>,Start_s,<None>,https://w3id.org/saref/StartState; http://www.w3.org/2002/07/owl/NamedIndividual
+https://w3id.org/saref/Tempsensfunc,Tempsensfunc,<None>,<None>,Tempsensfunc,<None>,https://w3id.org/saref/SensingFunction; http://www.w3.org/2002/07/owl/NamedIndividual
+https://saref.etsi.org/saref4ener/Executing,Executing,<None>,<None>,EXECUTING,<None>,https://saref.etsi.org/saref4ener/PowerSequenceStatus
+https://saref.etsi.org/saref4ener/Finished,Finished,<None>,<None>,Finished,<None>,https://saref.etsi.org/saref4ener/PowerSequenceStatus
+https://saref.etsi.org/saref4ener/Interrupted,Interrupted,<None>,<None>,Interrupted,<None>,https://saref.etsi.org/saref4ener/PowerSequenceStatus
+https://saref.etsi.org/saref4ener/NotScheduled,NotScheduled,<None>,<None>,NotScheduled,<None>,https://saref.etsi.org/saref4ener/PowerSequenceStatus
+https://saref.etsi.org/saref4ener/BatteryPowerSource,BatteryPowerSource,<None>,<None>,Battery_power_source,<None>,https://saref.etsi.org/saref4ener/PowerSource
+https://saref.etsi.org/saref4ener/DCPowerSource,DCPowerSource,<None>,<None>,DC_Power_source,<None>,https://saref.etsi.org/saref4ener/PowerSource
+https://saref.etsi.org/saref4ener/Mains3Phase,Mains3Phase,<None>,<None>,Mains3Phase,<None>,https://saref.etsi.org/saref4ener/PowerSource
+https://saref.etsi.org/saref4ener/MainsSinglePhase,MainsSinglePhase,<None>,<None>,Mains_single_phase,<None>,https://saref.etsi.org/saref4ener/PowerSource
+https://saref.etsi.org/saref4ener/Calculated,Calculated,<None>,<None>,Calculated,<None>,https://saref.etsi.org/saref4ener/ValueSource
+https://saref.etsi.org/saref4ener/Empirical,Empirical,<None>,<None>,Empirical,<None>,https://saref.etsi.org/saref4ener/ValueSource
+https://saref.etsi.org/saref4ener/Measured,Measured,<None>,<None>,Measured,<None>,https://saref.etsi.org/saref4ener/ValueSource
+https://saref.etsi.org/saref4ener/ElectricPowerL1,ElectricPowerL1,<None>,<None>,Electric_Power_L1,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/ElectricPowerL2,ElectricPowerL2,<None>,<None>,Electric_Power_L2,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/ElectricPowerL3,ElectricPowerL3,<None>,<None>,Electric_Power_L3,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/Gas,Gas,<None>,<None>,Gas,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/Heat,Heat,<None>,<None>,Heat,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/HeatFlowRate,HeatFlowRate,<None>,<None>,Heat_Flow_Rate,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/HeatTemperature,HeatTemperature,<None>,<None>,Heat_Temperature,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/HeatThermalPower,HeatThermalPower,<None>,<None>,Heat_Thermal_Power,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/HydrogenFlowRate,HydrogenFlowRate,<None>,<None>,Hydrogen_Flow_Rate,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/NaturalGasFlowRate,NaturalGasFlowRate,<None>,<None>,Natural_Gas_Flow_Rate,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/Oil,Oil,<None>,<None>,Oil,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/OilFlowRate,OilFlowRate,<None>,<None>,Oil_Flow_Rate,<None>,https://saref.etsi.org/core/Commodity
+https://saref.etsi.org/saref4ener/EuroPerKilowattHour,EuroPerKilowattHour,<None>,<None>,Euro_per_kilo_watt_hour,<None>,https://saref.etsi.org/core/UnitOfMeasure
+https://saref.etsi.org/saref4ener/Falling,Falling,<None>,<None>,Falling,<None>,https://saref.etsi.org/saref4ener/ValueTendency
+https://saref.etsi.org/saref4ener/Rising,Rising,<None>,<None>,Rising,<None>,https://saref.etsi.org/saref4ener/ValueTendency
+https://saref.etsi.org/saref4ener/Stable,Stable,<None>,<None>,Stable,<None>,https://saref.etsi.org/saref4ener/ValueTendency
