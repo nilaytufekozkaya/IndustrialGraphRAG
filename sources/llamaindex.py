@@ -247,7 +247,7 @@ def run(ttl_path, nlq):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run Industrial Graph RAG")
+    parser = argparse.ArgumentParser(description="Llamaindex RAG")
 
     parser.add_argument(
         "--ttl_file",

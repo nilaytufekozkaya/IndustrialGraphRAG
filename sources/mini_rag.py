@@ -123,10 +123,10 @@ def run(ttl_path, nlq):
 import argparse
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Run Industrial Graph RAG")
+    parser = argparse.ArgumentParser(description="ChatGPT Mini RAG")
 
     parser.add_argument(
-        "--txt_file",
+        "--ttl_file",
         type=str,
         required=True,
         help="txt_file knowledge graph file"
@@ -141,14 +141,14 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    sparql_query = run(args.txt_file, args.nlq)
+    sparql_query = run(args.ttl_file, args.nlq)
     print(sparql_query)
     
     #ttl_path = "../inputs/saref_large.txt"
     #nlq_file = "../inputs/competency_question.xlsx"
     #run_batch(ttl_path, nlq_file)
     
-# python mini_rag.py --txt_file "../inputs/saref_large.txt" --nlq "what is the instance of the temperature sensor?"
+# python mini_rag.py --ttl_file "../inputs/saref_large.txt" --nlq "what is the instance of the temperature sensor?"
 
 
 
