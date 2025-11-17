@@ -166,12 +166,12 @@ if __name__ == "__main__":
     sparql_query = run(args.ttl_file, args.nlq)
     print(sparql_query)
     
-    #ttl_path = "../inputs/saref_large.ttl"
-    #nlq_file = "../inputs/competency_question.xlsx"
+    #ttl_path = "../inputs/saref/saref_large.ttl"
+    #nlq_file = "../inputs/saref/competency_question.xlsx"
     #run_batch(ttl_path, nlq_file)
     
     
-# python node2vec_rag.py --ttl_file "../inputs/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
+# python node2vec_rag.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
     
         
     

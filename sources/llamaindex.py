@@ -269,4 +269,4 @@ if __name__ == "__main__":
     print(sparql_query)
     
     
-# python llamaindex.py --ttl_file "../inputs/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
+# python llamaindex.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"

@@ -22,40 +22,99 @@ You must provide an `OPENAI_API_KEY` as an environment variable.
 ```
 IndustrialGraphRAG/
 ├─ inputs/
-│  ├─ saref_large.ttl
-│  ├─ saref_large.txt
-│  └─ competency_question.txt   (or .xlsx)
+│  ├─ saref/
+│  │  ├─ saref_large.ttl
+│  │  ├─ saref_large.txt
+│  │  └─ competency_questions.xlsx
+│  │
+│  ├─ robotics/
+│  │  └─ robotics_compliance_rules.xlsx
+│  │
+│  └─ packml/
+│     └─ packml_compliance_rules.xlsx
+│
 ├─ outputs/
-│  └─ ...                      # batch outputs (e.g., Excel with SPARQL results)
+│  └─ ... 
+│
 └─ sources/
-   ├─ our_rag.py               # proposed Industrial Graph RAG
-   ├─ mini_rag.py              # LLM-only baseline
-   ├─ node2vec_rag.py          # Node2Vec RAG
-   ├─ llamaindex_rag.py        # LlamaIndex RAG
-   └─ rag_module/              # Industrial Graph RAG implementation
+   ├─ our_rag.py
+   ├─ mini_rag.py
+   ├─ node2vec_rag.py
+   ├─ llamaindex_rag.py
+   └─ rag_module/
+
 ```
 
 ---
 
 ## 📥 Inputs
 
-### 1. `saref_large.ttl` and `saref_large.txt`
+### **1. `inputs/saref/` --- Full Open Knowledge Graph**
 
-Based on publicly available **SAREF ontologies**:
+This folder contains all data required for **end-to-end GraphRAG
+experiments** on an openly available ontology.
 
-- **Core**
-- **ENER (Energy)**
-- **INMA (Industry & Manufacturing)**
+-   **`saref_large.ttl`**\
+    Complete SAREF knowledge graph (ontology + instances) for
+    large-scale subgraph extraction, NLQ→SPARQL generation, and
+    evaluation.
 
-Original source: <https://saref.etsi.org>
+-   **`saref_large.txt`**\
+    Plain-text dump of the same KG for text-only RAG baselines (e.g.,
+    MiniRAG).
 
-- Combined together into a unified TTL file (~3000 triples).
-- `.txt` is just a renamed copy for methods that do not accept `.ttl`.
+-   **`competency_question.xlsx`**\
+    Benchmark with:
 
-### 2. `competency_question.xlsx`
+    -   natural-language competency questions (NLQs)\
+    -   expected answer types\
+    -   optional ground-truth SPARQL queries
 
-Contains 10 NLQs used to validate parts of the SAREF KG.  
-Derived from evaluation questions used in the referenced paper.
+This folder supports **full GraphRAG pipeline demonstrations** on a
+publicly accessible dataset.
+
+------------------------------------------------------------------------
+
+### **2. `inputs/robotics/` --- OPC UA Robotics (Confidential KG)**
+
+The OPC UA Robotics Companion Specification is **confidential**, so the
+KG itself cannot be shared.
+
+Instead, this folder provides:
+
+-   **`compliance_rules_gt.xlsx`**
+    -   Rule sentences extracted from the official Companion
+        Specification\
+    -   Ground-truth SPARQL queries
+
+This dataset enables **industrial-grade evaluation** of NLQ→SPARQL and
+rule-validation logic without exposing the confidential Robotics model.
+
+------------------------------------------------------------------------
+
+### **3. `inputs/packml/` --- OPC UA PackML (Confidential KG)**
+
+Similarly, the PackML Companion Specification is proprietary. Therefore:
+
+-   **`compliance_rules_gt.xlsx`**
+    -   Rule sentences from the PackML specification\
+    -   Corresponding ground-truth SPARQL queries
+
+These rule-level datasets allow benchmarking the generalizability of the
+approach across **multiple OPC UA domains**.
+
+------------------------------------------------------------------------
+
+### 🔍 Why This Structure?
+
+-   **SAREF** is open → the full KG is included → allows end-to-end
+    GraphRAG and SPARQL evaluation.
+-   **Robotics & PackML** are confidential → only rule sentences &
+    SPARQL ground truths are shared.
+-   This design enables:
+    -   Demonstration of the **complete pipeline** on a public KG.
+    -   Evaluation on **real industrial rule datasets**.
+    -   Compliance with data confidentiality requirements.
 
 ---
 
@@ -93,7 +152,7 @@ Below are the four methods.
 
 ```bash
 cd sources
-python our_rag.py   --ttl_file "../inputs/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
+python our_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Outputs:**
@@ -127,7 +186,7 @@ It is **not graph-based** and **not a real RAG pipeline**, but is included for c
 
 ```bash
 cd sources
-python mini_rag.py   --ttl_file "../inputs/saref_large.txt"   --nlq "what is the instance of the temperature sensor?"
+python mini_rag.py   --ttl_file "../inputs/saref/saref_large.txt"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Output:**  
@@ -149,7 +208,7 @@ Uses **Node2Vec embeddings** for graph-based retrieval:
 
 ```bash
 cd sources
-python node2vec_rag.py   --ttl_file "../inputs/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
+python node2vec_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Output:**  
@@ -168,7 +227,7 @@ Uses structured or textified forms of the KG.
 
 ```bash
 cd sources
-python llamaindex_rag.py   --ttl_file "../inputs/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
+python llamaindex_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Output:**  

@@ -20,6 +20,7 @@ venv/
 
 # Temporary / large directories in your project
 outputs/
+outputs/*
 sources4azure/
 sources4test/
 
@@ -30,6 +31,10 @@ sources4test/
 
 # RAG module specific temp files
 industrial_graph_rag_module/temp_subgraph.ttl
+inputs/saref/preprocessed_kg.ttl
+inputs/saref/preprocessed_kg
 industrial_graph_rag_module/preprocessed_kg
+industrial_graph_rag_module/preprocessed_kg.ttl
 industrial_graph_rag_module/preprocessed_map.csv
 industrial_graph_rag_module/outputs/
+/sources/read_rdf.ipynb

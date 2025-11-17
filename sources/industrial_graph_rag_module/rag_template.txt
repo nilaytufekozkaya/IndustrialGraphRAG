@@ -8,7 +8,7 @@ all prefixes should end with / instead of #,
 uses the {QT} SPARQL keyword,
 includes only the minimal and sufficient triple patterns needed to validate the meaning of the natural language statement,
 uses rdf:type or the shorthand "a" where appropriate,
-considers subclasses of the classes,
+considers recursively subclasses of the classes,
 considers instances of the classes if relevant.
 
 use also this entity, node uri matches:
