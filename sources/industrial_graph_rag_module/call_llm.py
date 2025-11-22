@@ -111,7 +111,6 @@ def call_gpt_only_without_azure(prompt):
         messages=message_text
     )
 
-    #print(response.choices[0].message.content)
     return response.choices[0].message.content
 
 def call_gpt_only(prompt):
@@ -152,10 +151,6 @@ def call_gpt4(prompt):
 
     completion = call_gpt_only_without_azure(prompt)
 
-    #print(completion.to_json())
-
-        
-    #s = completion.choices[0].message.content
     s = completion
     start = '```sparql'
     end = '```'

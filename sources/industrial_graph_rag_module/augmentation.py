@@ -81,7 +81,6 @@ def find_all_shortest_path(graph, start, end):
 def find_shortest_path(graph, start, end):  
     try:
         path = nx.shortest_path(graph, start, end)
-        #print(path)
     except nx.NetworkXNoPath:  
         print("No path between these two nodes.")   
         path = None
@@ -113,9 +112,6 @@ def get_all_shortest_paths(G, source, target):
         return []
     paths_w_e = paths_with_edges(G, paths)  
     
-    for p in paths_w_e:  
-        #print(p) 
-        pass
     paths_w_e_flattened_list = [item for sublist in paths_w_e for item in sublist]  
     return paths_w_e_flattened_list 
 
@@ -126,9 +122,7 @@ def get_path(G, source, target):
         return []
     path_w_e = path_with_edges(G, path)  
     
-    for p in path_w_e:  
-        #print(p)
-        pass 
+
     return path_w_e 
 
 #v2 
@@ -153,7 +147,7 @@ def all_paths_shortest_all_nodes(G,nodes):
                         if len(paths) == 0:
                             for pair in pair_shortest_paths:
                                 paths.append(pair)
-                                #print(pair)
+                             
                         else:
                             for j in range(len(paths)):
                                 for pair in pair_shortest_paths:
@@ -216,8 +210,7 @@ def all_paths_shortest_all_nodes_v1(G, nodes):
         elif total_length == best_path_length:  
             best_paths.append(path_arr)  
     
-    for path in best_paths:  
-        #print(path)
+
         pass    
     return best_paths  
 
@@ -245,11 +238,8 @@ def expand_nodes(G, paths):
     all_extended = []
     for path in paths:
         node =path[0]
-        successors = list(G.successors(node))  
-        #print("Successors of node", node, ":", successors)  
-        # Find the predecessors (nodes that point to the chosen node)  
+        successors = list(G.successors(node))   
         predecessors = list(G.predecessors(node))  
-        #print("Predecessors of node", node, ":", predecessors)
         all_extended += set(successors + predecessors)
     
     return set (all_extended)
@@ -310,7 +300,6 @@ def get_instances_of_class(graph, class_node):
             instances = list(graph.successors(class_node))  
             return instances  
         else:  
-            #print(f"{class_node} is not a class node.")  
             return [] 
     else:
         return []
@@ -372,8 +361,6 @@ def find_instances(g, node):
     instances = []
     # If the node is a class, find its instances  
     if (node, RDF.type, OWL.Class) in g:  
-        print("The node is of type owl:Class")  
-        print("Its instances are:")  
         for s, _, _ in g.triples((None, RDF.type, node)):  
             instances.append(s)
     return instances
@@ -383,13 +370,10 @@ def get_type_of_node(g, node):
   
     # Check the type of the node  
     if (node, RDF.type, OWL.Class) in g:  
-        print("The node is of type owl:Class") 
         return "class" 
     elif (node, RDF.type, OWL.NamedIndividual) in g:  
-        print("The node is of type owl:NamedIndividual")  
         return "instance"
     else:  
-        print("The type of the node is not owl:Class or owl:NamedIndividual")  
         return "none"
 
 def get_all_shortest_paths_all_nodes_information_model_constraints(G, g, nodes):
@@ -409,6 +393,10 @@ def get_all_shortest_paths_all_nodes(G, g, nodes):
     paths = all_paths_shortest_all_nodes(G, nodes) 
 
     if len(paths) == 0:
+         # The above code is a Python script that uses the `print()` function to output a message.
+         # However, the message is not provided in the code snippet, as it is represented by the
+         # comment symbol `#`. The code snippet seems to be incomplete or missing the actual message
+         # to be printed.
          print("no path found")
          ext_nodes = expand_node_relations(g,[nodes])
          ext_nodes += expand_im(g, [nodes])
@@ -427,7 +415,6 @@ def get_all_shortest_paths_all_nodes(G, g, nodes):
     paths_w_e = paths_with_edges(G, paths)  
     
     paths_w_e_flattened_list = [item for sublist in paths_w_e for item in sublist]  
-    print("paths_w_e_flattened_list::", paths_w_e_flattened_list)
     return paths_w_e_flattened_list, ext_nodes
 
 def get_relation_nodes(G, paths):
@@ -459,11 +446,9 @@ def get_all_shortest_paths_all_nodes_smaller(G, g, nodes):
         return paths, ext_nodes, relation_nodes
     paths_w_e = paths_with_edges(G, paths)  
     
-    for p in paths_w_e:  
-        pass
-        #print(p) 
+
     paths_w_e_flattened_list = [item for sublist in paths_w_e for item in sublist]  
-    #print("paths_w_e_flattened_list::", paths_w_e_flattened_list)
+
     return paths_w_e_flattened_list, ext_nodes, relation_nodes
 
 def get_all_shortest_paths_all_nodes_small(G, g, nodes):
@@ -485,11 +470,8 @@ def get_all_shortest_paths_all_nodes_small(G, g, nodes):
         return paths, ext_nodes, relation_nodes
     paths_w_e = paths_with_edges(G, paths)  
     
-    for p in paths_w_e:  
-        pass
-        #print(p) 
+
     paths_w_e_flattened_list = [item for sublist in paths_w_e for item in sublist]  
-    print("paths_w_e_flattened_list::", paths_w_e_flattened_list)
     return paths_w_e_flattened_list, ext_nodes, relation_nodes
 
 def get_all_shortest_paths_all_nodes_v2(G, nodes):
@@ -500,10 +482,7 @@ def get_all_shortest_paths_all_nodes_v2(G, nodes):
     if len(paths) == 1:
         return paths
     paths_w_e = paths_with_edges(G, paths)  
-    
-    for p in paths_w_e:  
-        pass
-        #print(p) 
+
     paths_w_e_flattened_list = [item for sublist in paths_w_e for item in sublist]  
     return paths_w_e_flattened_list 
 
@@ -514,9 +493,6 @@ def get_all_paths_all_nodes(G, nodes):
         return []
     paths_w_e = paths_with_edges(G, paths)  
     
-    for p in paths_w_e:  
-        pass
-        #print(p) 
     paths_w_e_flattened_list = [item for sublist in paths_w_e for item in sublist]  
     return paths_w_e_flattened_list  
 
@@ -527,10 +503,7 @@ def get_path_all_nodes(G, nodes):
        
         return []
     path_w_e = path_with_edges(G, path)  
-    
-    for p in path_w_e:  
-        pass
-        #print(p) 
+
     return path_w_e 
 
 
@@ -769,18 +742,10 @@ def generate_new_graph(g, path_with_edges, ext_nodes):
     return node_graph
 
 def add_node(node_uri, g, node_graph):
-    if (node_uri, None, None) in g or (None, None, node_uri) in g:  
-        #print("The node is already in the graph.") 
-        pass 
-        #node_graph
-    #print("The node is not in the graph.")  
+
     node_data = g.triples((node_uri, None, None))
-    #print("--------------------------------------") 
-    #print("generated triples:")
     for s, p, o in node_data: 
-        #print(f"Subject: {s}, Predicate: {p}, Object: {o}") 
         node_graph.add((s, p, o)) 
-    #print("----------")
     return node_graph
 
 def save_graph(node_graph, output_file):

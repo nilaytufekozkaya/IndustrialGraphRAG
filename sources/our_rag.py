@@ -24,4 +24,4 @@ if __name__ == "__main__":
     sparql_query = run_our_rag(args.ttl_file, args.nlq)
     print(sparql_query)
     
-#python our_rag.py --ttl_file "../inputs/saef_large.ttl" --nlq "what is the instance of the temperature sensor?"
+#python our_rag.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"

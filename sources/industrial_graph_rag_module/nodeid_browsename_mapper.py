@@ -32,7 +32,6 @@ def extract_label_from_uri(uri):
     return local
 
 def map_nodeids_to_browsenames(input_file, output_file):
-    print(f"Mapping nodeids to browseNames on {input_file}.")
 
     g = rdflib.Graph()
 

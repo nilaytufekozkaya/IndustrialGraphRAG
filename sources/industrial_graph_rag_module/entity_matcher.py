@@ -74,7 +74,6 @@ def extract_matches(matched_output):
         
         print("Error!")
         print(f"LLM output:{matched_output}")
-        #print(traceback.format_exc())
         
     return match
 
