@@ -38,9 +38,9 @@ IndustrialGraphRAG/
 │
 └─ sources/
    ├─ our_rag.py
-   ├─ mini_rag.py
+   ├─ lightweight_rag.py
    ├─ node2vec_rag.py
-   ├─ llamaindex_rag.py
+   ├─ schema_aware_rag.py
    └─ rag_module/
 
 ```
@@ -61,7 +61,7 @@ experiments** on an openly available ontology.
 
 -   **`saref_large.txt`**\
     Plain-text dump of the same KG for text-only RAG baselines (e.g.,
-    MiniRAG).
+    lightweight RAG).
 
 -   **`competency_question.xlsx`**\
     Benchmark with:
@@ -173,9 +173,9 @@ WHERE {
 
 ---
 
-## 2️⃣ Mini RAG (LLM-only Baseline)
+## 2️⃣ Lightweight RAG (LLM-only Baseline)
 
-**File:** `mini_rag.py`  
+**File:** `lightweight_rag.py`  
 **Description:**  
 This mimics ChatGPT’s “upload document and ask a question” behavior.  
 It is **not graph-based** and **not a real RAG pipeline**, but is included for comparison.
@@ -186,7 +186,7 @@ It is **not graph-based** and **not a real RAG pipeline**, but is included for c
 
 ```bash
 cd sources
-python mini_rag.py   --ttl_file "../inputs/saref/saref_large.txt"   --nlq "what is the instance of the temperature sensor?"
+python lightweight_rag.py   --ttl_file "../inputs/saref/saref_large.txt"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Output:**  
@@ -216,18 +216,18 @@ python node2vec_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "w
 
 ---
 
-## 4️⃣ LlamaIndex RAG
+## 4️⃣ Schema-aware RAG
 
-**File:** `llamaindex_rag.py`  
+**File:** `schema_aware_rag.py.py`  
 **Description:**  
-A LlamaIndex-based RAG pipeline adapted to work over SAREF-like graphs.  
+A Schema-aware RAG pipeline adapted to work over SAREF-like graphs.  
 Uses structured or textified forms of the KG.
 
 **Example:**
 
 ```bash
 cd sources
-python llamaindex_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
+python schema_aware_rag.py.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Output:**  
@@ -263,8 +263,8 @@ Preferred:
 
 - `our_rag.py` → full industrial RAG  
 - `node2vec_rag.py` → graph-embedding RAG  
-- `llamaindex_rag.py` → LlamaIndex RAG  
-- `mini_rag.py` → LLM baseline
+- `schema_aware_rag.py` → Schema-aware RAG  
+- `lightweight_rag.py` → LLM baseline
 
 ---
 

@@ -17,7 +17,9 @@ class CustomCallbackHandler(BaseCallbackHandler):
 
 def call_matchner(nlq, csv_file):
     # Load environment variables from the specified .env file  
-    load_dotenv(dotenv_path=ENV_PATH, override=True)  
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    env_base = os.path.join(BASE_DIR, ENV_PATH) 
+    load_dotenv(dotenv_path=env_base, override=True)  
 
     # Fetch the API key, endpoint, API version, deployment name, model name, and temperature from the environment variables  
     #api_key = os.getenv("AZURE_OPENAI_API_KEY")  

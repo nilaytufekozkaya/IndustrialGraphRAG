@@ -11,8 +11,8 @@ from typing import List, Tuple, Dict, Any
 
 from rdflib import Graph, RDF, RDFS, OWL, XSD, URIRef, Literal, BNode
 
-# ---- Optional LLM backends ----
-USE_LLAMAINDEX = True  # set True to use llama_index.llms.openai.OpenAI if you prefer
+USE_LLAMAINDEX = False  # set True to use llama_index.llms.openai.OpenAI if you prefer
+
 
 def _init_llm(model: str, temperature: float = 0.0):
     if USE_LLAMAINDEX:
@@ -265,8 +265,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    
     sparql_query = run(args.ttl_file, args.nlq)
     print(sparql_query)
     
     
-# python llamaindex.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
+# python schema_aware_rag.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"

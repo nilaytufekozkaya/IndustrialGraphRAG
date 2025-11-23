@@ -25,4 +25,10 @@ QUERY_TYPE = {
     NLQ_TYPE.IM: ""
 }
 
+class LLM_ENGINE_TYPES(Enum):  
+    AZURE = "AZURE"  
+    OPENAI = "OPENAI"
+  
+LLM_ENGINE = LLM_ENGINE_TYPES.OPENAI
+
 

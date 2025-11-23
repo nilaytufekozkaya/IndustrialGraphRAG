@@ -52,6 +52,7 @@ def extract_sub_graph_information_model_constraints(ttl_file, nodes, output_file
 
 def pipeline_ext(ttl_file, el, nlq_type, nlq, output_file):
     nodes = list(el.values())
+    print("list(el.values())", list(el.values()))
     if nlq_type == NLQ_TYPE.IM:
         pipeline_extr_sub_graph_im_constraints(ttl_file, nodes, output_file)
         df = pd.DataFrame(data=[""], columns=["Result"]) 

@@ -1,5 +1,6 @@
 
 from industrial_graph_rag_module.main import run_our_rag, run_our_rag_batch_single
+from industrial_graph_rag_module.config import LLM_ENGINE_TYPES
 import argparse
 
 if __name__ == "__main__":
@@ -21,7 +22,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    sparql_query = run_our_rag(args.ttl_file, args.nlq)
+    sparql_query = run_our_rag(args.ttl_file, args.nlq, llm_engine=LLM_ENGINE_TYPES.OPENAI)
     print(sparql_query)
     
 #python our_rag.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"

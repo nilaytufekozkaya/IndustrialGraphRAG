@@ -3,7 +3,7 @@ from rdflib.plugins.sparql import prepareQuery
 import time
 import os
 from openai import AzureOpenAI
-from .config import ENV_PATH
+from .config import ENV_PATH, LLM_ENGINE, LLM_ENGINE_TYPES
 from dotenv import load_dotenv
 import tiktoken
 from openai import OpenAI
@@ -111,7 +111,8 @@ def call_gpt_only_without_azure(prompt):
         messages=message_text
     )
 
-    return response.choices[0].message.content
+    #return response.choices[0].message.content
+    return response
 
 def call_gpt_only(prompt):
     # Load environment variables from the specified .env file  
@@ -151,9 +152,12 @@ def call_gpt_only(prompt):
     return completion
 
 def call_gpt4(prompt): 
-
-    #completion = call_gpt_only_without_azure(prompt)
-    completion = call_gpt_only(prompt)
+    
+    if LLM_ENGINE == LLM_ENGINE_TYPES.OPENAI:
+        completion = call_gpt_only_without_azure(prompt)
+    
+    else:
+        completion = call_gpt_only(prompt)
     
     s = completion.choices[0].message.content
     start = '```sparql'
