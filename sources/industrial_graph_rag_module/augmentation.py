@@ -404,6 +404,7 @@ def get_all_shortest_paths_all_nodes(G, g, nodes):
          ext_nodes = list(set(ext_nodes))
          
     #ext_paths = expand_nodes(G,paths)
+    
     else:
         ext_nodes = expand_node_relations(g,paths)
         ext_nodes += expand_im(g, paths)
@@ -738,7 +739,7 @@ def generate_new_graph(g, path_with_edges, ext_nodes):
     for ext_node in ext_nodes:
         node1 = URIRef(ext_node) 
         node_graph = add_node(node1, g, node_graph) 
-        
+           
     return node_graph
 
 def add_node(node_uri, g, node_graph):

@@ -115,7 +115,9 @@ def call_gpt_only_without_azure(prompt):
 
 def call_gpt_only(prompt):
     # Load environment variables from the specified .env file  
-    load_dotenv(dotenv_path=ENV_PATH, override=True)  
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    env_base = os.path.join(BASE_DIR, ENV_PATH) 
+    load_dotenv(dotenv_path=env_base, override=True)  
 
     # Fetch the API key, endpoint, API version, and deployment name from the environment variables  
     api_key = os.getenv("AZURE_OPENAI_API_KEY")  
@@ -132,6 +134,7 @@ def call_gpt_only(prompt):
     # Prepare your message  
     message_text = [{"role":"system","content":"You are an AI assistant that helps people find information."},{"role":"user","content":prompt}]
 
+    print(prompt)
 
     # Create the completion  
     completion = client.chat.completions.create(  
@@ -149,9 +152,10 @@ def call_gpt_only(prompt):
 
 def call_gpt4(prompt): 
 
-    completion = call_gpt_only_without_azure(prompt)
-
-    s = completion
+    #completion = call_gpt_only_without_azure(prompt)
+    completion = call_gpt_only(prompt)
+    
+    s = completion.choices[0].message.content
     start = '```sparql'
     end = '```'
     tt0 = s.find(start)

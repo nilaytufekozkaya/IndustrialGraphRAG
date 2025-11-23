@@ -142,7 +142,7 @@ def generate_sparql_result_df_nlq(queries, ttl_file, nlq_type):
 
 #extract the sub-graph
 def extract_sub_graph_small(ttl_file, nodes, output_file):
-    print("... extracting sub-graph ...")
+    print("... extracting sub-graph small...")
     augmentation.rag_all_shortest_paths_all_nodes_small(ttl_file, nodes, output_file)
     
 def generate_sparql_prompt(prompt):
@@ -152,6 +152,6 @@ def generate_sparql_prompt(prompt):
 
 #extract the sub-graph smaller
 def extract_sub_graph_smaller(ttl_file, nodes, output_file):
-    print("... extracting sub-graph ...")
+    print("... extracting sub-graph smaller...")
     augmentation.rag_all_shortest_paths_all_nodes_smaller(ttl_file, nodes, output_file)
 

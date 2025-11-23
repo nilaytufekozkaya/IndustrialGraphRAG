@@ -12,9 +12,6 @@ INPUT_KG_FILE = "input_kg.ttl"
 PREPROCESSED_CSV_FILE = "preprocessed_map.csv"
 RAG_TEMPLATE_FILE = RELATIVE_PATH + "rag_template.txt"
 INFORMATION_MODEL_FILE_INTERNAL = "information_model.xml"
-SUB_GRAPH_FILE = "temp_subgraph.ttl"
-COMBINED_SUB_GRAPH_FILE = "combined_subgraph.ttl"
-INPUT_KG_FILE = "input_kg.ttl"
 IM_OUTPUT_FOLDER = "tmp_output_im/"
 
 class NLQ_TYPE(Enum):  
