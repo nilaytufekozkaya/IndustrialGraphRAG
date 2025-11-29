@@ -38,3 +38,5 @@ industrial_graph_rag_module/preprocessed_kg.ttl
 industrial_graph_rag_module/preprocessed_map.csv
 industrial_graph_rag_module/outputs/
 /sources/read_rdf.ipynb
+/sources/node2vec_rag.py
+/sources_azure/node2vec_rag.py

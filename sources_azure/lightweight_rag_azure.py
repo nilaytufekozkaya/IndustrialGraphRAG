@@ -37,7 +37,7 @@ def create_batch_vectors(client, vs, ttl_path):
 def bind_assistant_to_file_search(client, vs):
 
     assistant = client.beta.assistants.create(
-        name="GraphRAG Agent",
+        name="RAG Agent",
         model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
         tools=[{"type": "file_search"}],
         tool_resources={"file_search": {"vector_store_ids": [vs.id]}},

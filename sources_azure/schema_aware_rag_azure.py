@@ -203,6 +203,8 @@ def run(ttl_path, nlq):
     g.parse(ttl_path, format="turtle")
 
     context = build_context(g, nlq)
+    print("---")
+    print(context)
     llm = _init_llm(model="gpt-4o")
 
     prompt = generate_prompt(nlq, context)

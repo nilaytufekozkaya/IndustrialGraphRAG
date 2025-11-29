@@ -11,9 +11,8 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql/> .
 @prefix ns1_inma: <https://saref.etsi.org/saref4inma/> .
 
-@prefix saref: <https://w3id.org/saref#> .
+@prefix saref: <https://w3id.org/saref/> .
 @prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .

@@ -1,6 +1,25 @@
 Using the provided context below:
 {SCHEMA}
 
+@prefix ns3_inma: <https://saref.etsi.org/core/> .
+@prefix ns2_inma: <http://purl.org/dc/terms/> .
+@prefix ns4_inma: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core/> .
+@prefix time: <http://www.w3.org/2006/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
+@prefix ns2_ener: <https://saref.etsi.org/saref4ener/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql/> .
+@prefix ns1_inma: <https://saref.etsi.org/saref4inma/> .
+
+@prefix saref: <https://w3id.org/saref/> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
 First, extract all relevant paths and relations between classes, properties, and instances based on the ontology.
 Then, generate a SPARQL query that:
 uses all required prefixes including xsd/,

@@ -39,7 +39,6 @@ IndustrialGraphRAG/
 └─ sources/
    ├─ our_rag.py
    ├─ lightweight_rag.py
-   ├─ node2vec_rag.py
    ├─ schema_aware_rag.py
    └─ rag_module/
 
@@ -142,7 +141,7 @@ Below are the four methods.
 
 ---
 
-## 1️⃣ Industrial Graph RAG (Our Method)
+## 1 Industrial Graph RAG (Our Method)
 
 **File:** `our_rag.py`  
 **Implements:** our proposed large-KG → subgraph → SPARQL pipeline  
@@ -173,7 +172,7 @@ WHERE {
 
 ---
 
-## 2️⃣ Lightweight RAG (LLM-only Baseline)
+## 2 Lightweight RAG (LLM-only Baseline)
 
 **File:** `lightweight_rag.py`  
 **Description:**  
@@ -194,29 +193,7 @@ python lightweight_rag.py   --ttl_file "../inputs/saref/saref_large.txt"   --nlq
 
 ---
 
-## 3️⃣ Node2Vec RAG
-
-**File:** `node2vec_rag.py`  
-**Description:**  
-Uses **Node2Vec embeddings** for graph-based retrieval:  
-- Nodes are embedded using Node2Vec  
-- Most relevant nodes to the NLQ are retrieved  
-- A subgraph is formed  
-- A SPARQL query is produced from retrieved triples
-
-**Example:**
-
-```bash
-cd sources
-python node2vec_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
-```
-
-**Output:**  
-- SPARQL query built from Node2Vec-retrieved subgraph.
-
----
-
-## 4️⃣ Schema-aware RAG
+## 3 Schema-aware RAG
 
 **File:** `schema_aware_rag.py.py`  
 **Description:**  
@@ -262,28 +239,10 @@ python <rag_method>.py --ttl_file <KG> --nlq <question>
 Preferred:
 
 - `our_rag.py` → full industrial RAG  
-- `node2vec_rag.py` → graph-embedding RAG  
 - `schema_aware_rag.py` → Schema-aware RAG  
 - `lightweight_rag.py` → LLM baseline
 
----
 
-## 📚 Citation
-
-If you use this system, please cite:
-
-```bibtex
-@inproceedings{tufek2024validating,
-  title        = {Validating semantic artifacts with large language models},
-  author       = {Tufek, Nilay and Thuluva, Aparna Saissre and Just, Valentin Philipp
-                  and Ekaputra, Fajar J and Bandyopadhyay, Tathagata and Sabou, Marta
-                  and Hanbury, Allan},
-  booktitle    = {European Semantic Web Conference},
-  pages        = {92--101},
-  year         = {2024},
-  organization = {Springer}
-}
-```
 ---
 
 
