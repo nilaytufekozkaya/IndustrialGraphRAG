@@ -1,0 +1,13 @@
+nlq_id, nlq, per-execution accuracy, pass/fail
+1, All "MotionDeviceSystemType" is a subclass of "ComponentType"., 5/5, PASS
+2, At least one instance of a MotionDeviceSystemType must be instantiated., 5/5, PASS
+3, The" InverseName" of "Moves" is "IsMovedBy".,  5/5, PASS
+4, The "InverseName" of "HasSlave" is "IsSlaveOf"., 4/5, PASS
+5, The "InverseName" of "HasSafetyStates" is "SafetyStatesOf"., 4/5, PASS
+6, The "InverseName" of "Controls" is "IsControlledBy"., 5/5, PASS
+7, The "IsConnectedTo" reference has no "InverseName"., 4/5, PASS
+8, The "IsConnectedTo" reference is symmetric., 5/5, PASS
+9, The SourceNode of a node labeled IsConnectedTo shall be an ObjectType or Object and the TargetNode shall be an Object. when it is used as relation or objectproperty, 1/5, FAIL
+10, If a node has "nodeClass" property it must also have a nodeid property, 0/5, FAIL
+11, If "MotionDeviceSystemType" hasProperty to "ComponentName" then the "datatype" of the "ComponentName" should be "LocalizedText", 4/5, PASS
+12, An abstract class cannot be instantiated, 0/5, FAIL
