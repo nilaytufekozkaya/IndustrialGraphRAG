@@ -193,10 +193,52 @@ def generate_prompt(nlq, context):
     prompt = text.replace("{QT}", "SELECT")
     return prompt
 
+def read_nlqs(nlq_file):
+    df = pd.read_excel(nlq_file)
+    return df
 
 # ============================================================
 #   Main SPARQL generation
 # ============================================================
+import pandas as pd
+def run_batch_ntimes_excel(ttl_path, nlq_file, n):
+    g = Graph()
+    g.parse(ttl_path, format="turtle")
+    df = read_nlqs(nlq_file)
+    nlq_list = df["NLQ"].tolist()
+    queries = []
+    result_df = [["NLQ", "q1", "q2", "q3", "q4", "q5"]]
+    for nlq in nlq_list:
+        print(nlq)
+        res_tmp = []
+        res_tmp.append(nlq)
+        for i in range(n):
+            context = build_context(g, nlq)
+            print("---")
+            print(context)
+            llm = _init_llm(model="gpt-4o")
+
+
+            prompt = generate_prompt(nlq, context)
+            prompt = prompt.replace(
+                "If the NLQ is a boolean claim, prefer an ASK query; otherwise SELECT.",
+                "Always produce a SELECT query (tabular)."
+            )
+
+            text = _llm_complete(llm, prompt)
+            sparql_query = extract_sparql(text)
+            if not sparql_query:
+                print("Failed to extract SPARQL:\n", text)
+                sys.exit(3)
+            res_tmp.append(sparql_query)
+            print("----")
+        print(" --- NLQ END ---")
+        result_df.append(res_tmp)
+
+    print("-- BATCH DONE --")
+    df = pd.DataFrame(result_df)
+    df.to_excel("../outputs/saref_5_time_schema_aware_azure.xlsx", index=False, header=False)
+
 
 def run(ttl_path, nlq):
     g = Graph()
@@ -237,3 +279,4 @@ if __name__ == "__main__":
 
 
 # python schema_aware_rag_azure.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
+# python schema_aware_rag_azure.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "What function does a temperature sensor device have?"

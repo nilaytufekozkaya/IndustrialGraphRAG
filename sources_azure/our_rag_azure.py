@@ -12,7 +12,13 @@ sys.path.append(parent_dir)
 
 from sources.industrial_graph_rag_module.main import run_our_rag, run_our_rag_batch_single
 from sources.industrial_graph_rag_module.config import LLM_ENGINE_TYPES, LLM_ENGINE
+from sources.industrial_graph_rag_module.main import run_our_rag_batch_n_excel
 import argparse
+
+def run_our_rag_batch_n_exc(ttl_file, nlq, n):
+    run_our_rag_batch_n_excel(ttl_file, nlq, LLM_ENGINE_TYPES.AZURE, n)
+    
+    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run Industrial Graph RAG")
@@ -37,3 +43,5 @@ if __name__ == "__main__":
     print(sparql_query)
     
 #python our_rag_azure.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "what is the instance of the temperature sensor?"
+#python our_rag_azure.py --ttl_file "../inputs/saref/saref_large.ttl" --nlq "WIn which state is a temperature sensor currently in?"
+

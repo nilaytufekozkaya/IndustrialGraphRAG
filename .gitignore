@@ -30,13 +30,20 @@ sources4test/
 # sources/*
 
 # RAG module specific temp files
-industrial_graph_rag_module/temp_subgraph.ttl
+
 inputs/saref/preprocessed_kg.ttl
 inputs/saref/preprocessed_kg
-industrial_graph_rag_module/preprocessed_kg
-industrial_graph_rag_module/preprocessed_kg.ttl
-industrial_graph_rag_module/preprocessed_map.csv
-industrial_graph_rag_module/outputs/
-/sources/read_rdf.ipynb
-/sources/node2vec_rag.py
-/sources_azure/node2vec_rag.py
+sources/industrial_graph_rag_module/preprocessed_kg
+sources/industrial_graph_rag_module/preprocessed_kg.ttl
+sources/industrial_graph_rag_module/preprocessed_map.csv
+sources/industrial_graph_rag_module/outputs/
+sources/industrial_graph_rag_module/temp_subgraph.ttl
+sources/read_rdf.ipynb
+sources/node2vec_rag.py
+sources_azure/node2vec_rag.py
+
+sources_azure/industrial_graph_rag_module/preprocessed_kg
+sources_azure/industrial_graph_rag_module/preprocessed_kg.ttl
+sources_azure/industrial_graph_rag_module/preprocessed_map.csv
+sources_azure/industrial_graph_rag_module/outputs/
+sources_azure/industrial_graph_rag_module/temp_subgraph.ttl

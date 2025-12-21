@@ -55,7 +55,7 @@ def create_message_form(client, nlq):
     text = text.replace("{NLQ}", nlq)
     prompt = text.replace("{QT}", "SELECT")
 
-    print("prompt:", prompt)
+    #print("prompt:", prompt)
 
     thread = client.beta.threads.create()
     client.beta.threads.messages.create(
@@ -89,7 +89,6 @@ def run_llm(client, thread, assistant):
         for p in m.content:
             if p.type == "text" and m.role == "assistant":
                 q = str(p.text.value)
-                print(q)
                 return q
 
     return "not generated"
@@ -104,6 +103,55 @@ def save_queries(df, queries):
     df["generated queries lightweight rag"] = queries
     df.to_excel("../outputs/lightweight_rag_combined_mixed.xlsx", index=False)
 
+
+def run_batch_ntimes_excel(ttl_path, nlq_file, n):
+    df = read_nlqs(nlq_file)
+    nlq_list = df["NLQ"].tolist()
+    queries = []
+    result_df = [["NLQ", "q1", "q2", "q3", "q4", "q5"]]
+    for nlq in nlq_list:
+        print(nlq)
+        res_tmp = []
+        res_tmp.append(nlq)
+        for i in range(n):
+            client, vs = prep()
+            create_batch_vectors(client, vs, ttl_path)
+            assistant = bind_assistant_to_file_search(client, vs)
+            client, thread = create_message_form(client, nlq)
+            query = run_llm(client, thread, assistant)
+            queries.append(query)
+            print(str(i+1) + " round:")
+            print(query)
+            res_tmp.append(query)
+            print("-----")
+        print(" --- NLQ END ---")
+        result_df.append(res_tmp)
+    print("-- BATCH DONE --")
+    df = pd.DataFrame(result_df)
+    df.to_excel("../outputs/saref_5_time_lightweight_azure.xlsx", index=False, header=False)
+    dd = pd.read_excel("../outputs/saref_5_time_lightweight_azure.xlsx")
+    print(dd)
+
+def run_batch_ntimes(ttl_path, nlq_file, n):
+    df = read_nlqs(nlq_file)
+    nlq_list = df["NLQ"].tolist()
+    queries = []
+
+    for nlq in nlq_list:
+        print(nlq)
+        for i in range(n):
+            client, vs = prep()
+            create_batch_vectors(client, vs, ttl_path)
+            assistant = bind_assistant_to_file_search(client, vs)
+            client, thread = create_message_form(client, nlq)
+            query = run_llm(client, thread, assistant)
+            queries.append(query)
+            print(str(i+1) + " round:")
+            print(query)
+            print("-----")
+        print(" --- NLQ END ---")
+    print("-- BATCH DONE --")
+    #save_queries(df, queries)
 
 def run_batch(ttl_path, nlq_file):
     df = read_nlqs(nlq_file)
@@ -120,7 +168,7 @@ def run_batch(ttl_path, nlq_file):
         print(nlq)
         print(query)
         print("-----")
-
+    print("-- BATCH DONE --")
     save_queries(df, queries)
 
 
@@ -154,5 +202,11 @@ if __name__ == "__main__":
 
     sparql_query = run(args.ttl_file, args.nlq)
     print(sparql_query)
+    
+print("hi")
 
     # python lightweight_rag_azure.py --ttl_file "../inputs/saref/saref_large.txt" --nlq "what is the instance of the temperature sensor?"
+    # python lightweight_rag_azure.py --ttl_file "../inputs/robotics/nlqs_robotics_novars/RobotDemoNodeset-v5.txt" --nlq "How many instances of Robot are there? what are their Label?"
+    
+    
+    
