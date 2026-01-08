@@ -5,13 +5,7 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Virtual environments
-venv/
-.venv/
 
-# Local environment files
-.env
-*.env
 
 # IDE files
 .vscode/

@@ -51,8 +51,6 @@ IndustrialGraphRAG/
 │  └─ packml/
 │     └─ packml_compliance_rules.xlsx
 │
-├─ outputs/
-│  └─ ...
 │
 ├─ sources/                # OpenAI-based implementations
 │  ├─ our_rag.py
@@ -61,9 +59,9 @@ IndustrialGraphRAG/
 │  └─ .env
 │
 ├─ sources_azure/          # Azure OpenAI-based implementations
-│  ├─ our_rag.py
-│  ├─ lightweight_rag.py
-│  ├─ schema_aware_rag.py
+│  ├─ our_rag_azure.py
+│  ├─ lightweight_rag_azure.py
+│  ├─ schema_aware_rag_azure.py
 │  └─ .env
 │
 └─ test_results/
@@ -99,12 +97,6 @@ Used for **industrial compliance validation** without exposing the KG.
 ### 3 `inputs/packml/` — OPC UA PackML (KG Confidential)
 
 - **`packml_validation.xlsx`** — rules + ground-truth SPARQL
-
----
-
-## Outputs
-
-All generated artifacts (SPARQL queries, evaluation tables) will be written to `outputs/` after run.
 
 ---
 
@@ -183,7 +175,7 @@ Uses structured or textified forms of the KG.
 
 ```bash
 cd sources
-python schema_aware_rag.py.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
+python schema_aware_rag.py   --ttl_file "../inputs/saref/saref_large.ttl"   --nlq "what is the instance of the temperature sensor?"
 ```
 
 **Output:**  
