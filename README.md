@@ -1,19 +1,37 @@
 # IndustrialGraphRAG
 
-IndustrialGraphRAG is a research prototype for **validating**, **querying**, and **instantiating** large knowledge graphs using **natural language (NLQ) inputs** and multiple **RAG (Retrieval-Augmented Generation)** approaches.
+IndustrialGraphRAG is a **research prototype** for **validating**, **querying**, and **instantiating** large-scale industrial knowledge graphs using **natural language questions (NLQs)** and multiple **Retrieval-Augmented Generation (RAG)** strategies.
 
 Given:
 
-- a **large knowledge graph** (TTL file), and  
+- a **large knowledge graph** (e.g., a `.ttl` file), and  
 - a **natural-language question (NLQ)**
 
-the system produces:
+IndustrialGraphRAG produces:
 
-1. A **compact subgraph** (suitable as context for an LLM prompt), and  
-2. A **corresponding SPARQL query** for the NLQ.
+1. a **compact, query-relevant subgraph** (suitable as LLM context), and  
+2. a **corresponding SPARQL query** answering the NLQ.
 
-The main LLM backend is **OpenAI ChatGPT 4o**.  
-You must provide an `OPENAI_API_KEY` as an environment variable.
+The framework is designed for **industrial semantic artifacts**, with a strong focus on **OPC UA Companion Specifications** and **large ontology-based KGs**.
+
+---
+
+## 🧠 LLM Backends
+
+IndustrialGraphRAG supports **two interchangeable LLM backends**:
+
+- **OpenAI API** (ChatGPT / GPT-4o)  
+- **Azure OpenAI API** (GPT-4o deployments)
+
+The backend is selected implicitly via the folder you run from:
+
+| Folder | LLM Backend | API Key Used |
+|------|------------|-------------|
+| `sources/` | OpenAI | `OPENAI_API_KEY` |
+| `sources_azure/` | Azure OpenAI | `AZURE_OPENAI_API_KEY` |
+
+⚠️ **Important:**  
+You must configure the `.env` file **according to the backend you want to use**. The keys and environment variables differ between OpenAI and Azure OpenAI.
 
 ---
 
@@ -34,110 +52,71 @@ IndustrialGraphRAG/
 │     └─ packml_compliance_rules.xlsx
 │
 ├─ outputs/
-│  └─ ... 
+│  └─ ...
 │
-└─ sources/
-   ├─ our_rag.py
-   ├─ lightweight_rag.py
-   ├─ schema_aware_rag.py
-   └─ rag_module/
-
+├─ sources/                # OpenAI-based implementations
+│  ├─ our_rag.py
+│  ├─ lightweight_rag.py
+│  ├─ schema_aware_rag.py
+│  └─ .env
+│
+├─ sources_azure/          # Azure OpenAI-based implementations
+│  ├─ our_rag.py
+│  ├─ lightweight_rag.py
+│  ├─ schema_aware_rag.py
+│  └─ .env
+│
+└─ test_results/
+   ├─ packml/
+   ├─ robotics/
+   └─ saref/
 ```
 
 ---
 
-## 📥 Inputs
+##  Inputs
 
-### **1. `inputs/saref/` --- Full Open Knowledge Graph**
+### 1 `inputs/saref/` — (KG Public)
 
-This folder contains all data required for **end-to-end GraphRAG
-experiments** on an openly available ontology.
+This folder contains **all data required for full end-to-end GraphRAG experiments** on a **publicly available ontology**.
 
--   **`saref_large.ttl`**\
-    Complete SAREF knowledge graph (ontology + instances) for
-    large-scale subgraph extraction, NLQ→SPARQL generation, and
-    evaluation.
-
--   **`saref_large.txt`**\
-    Plain-text dump of the same KG for text-only RAG baselines (e.g.,
-    lightweight RAG).
-
--   **`competency_question.xlsx`**\
-    Benchmark with:
-
-    -   natural-language competency questions (NLQs)\
-    -   expected answer types\
-    -   optional ground-truth SPARQL queries
-
-This folder supports **full GraphRAG pipeline demonstrations** on a
-publicly accessible dataset.
-
-------------------------------------------------------------------------
-
-### **2. `inputs/robotics/` --- OPC UA Robotics (Confidential KG)**
-
-The OPC UA Robotics Companion Specification is **confidential**, so the
-KG itself cannot be shared.
-
-Instead, this folder provides:
-
--   **`compliance_rules_gt.xlsx`**
-    -   Rule sentences extracted from the official Companion
-        Specification\
-    -   Ground-truth SPARQL queries
-
-This dataset enables **industrial-grade evaluation** of NLQ→SPARQL and
-rule-validation logic without exposing the confidential Robotics model.
-
-------------------------------------------------------------------------
-
-### **3. `inputs/packml/` --- OPC UA PackML (Confidential KG)**
-
-Similarly, the PackML Companion Specification is proprietary. Therefore:
-
--   **`compliance_rules_gt.xlsx`**
-    -   Rule sentences from the PackML specification\
-    -   Corresponding ground-truth SPARQL queries
-
-These rule-level datasets allow benchmarking the generalizability of the
-approach across **multiple OPC UA domains**.
-
-------------------------------------------------------------------------
-
-### 🔍 Why This Structure?
-
--   **SAREF** is open → the full KG is included → allows end-to-end
-    GraphRAG and SPARQL evaluation.
--   **Robotics & PackML** are confidential → only rule sentences &
-    SPARQL ground truths are shared.
--   This design enables:
-    -   Demonstration of the **complete pipeline** on a public KG.
-    -   Evaluation on **real industrial rule datasets**.
-    -   Compliance with data confidentiality requirements.
+- **`saref_large.ttl`** — complete SAREF KG (ontology + instances)
+- **`saref_large.txt`** — text dump for LLM-only baselines
+- **`information_retrieval_nlqs_gt.xlsx`** — NLQs, ground-truth SPARQL
 
 ---
 
-## 📤 Outputs
+### 2 `inputs/robotics/` — OPC UA Robotics (KG Confidential)
 
-Batch runs write results under `outputs/`.  
-This may include:
+Contains rule-level datasets only:
 
-- Extracted subgraphs
-- SPARQL queries
-- Execution results in Excel/CSV
+- **`robotics_validation.xlsx`** — rules + ground-truth SPARQL
+
+Used for **industrial compliance validation** without exposing the KG.
 
 ---
 
-## 🧩 RAG Implementations
+### 3 `inputs/packml/` — OPC UA PackML (KG Confidential)
 
-All runnable via:
+- **`packml_validation.xlsx`** — rules + ground-truth SPARQL
+
+---
+
+## Outputs
+
+All generated artifacts (SPARQL queries, evaluation tables) will be written to `outputs/` after run.
+
+---
+
+## RAG Implementations
+
+All RAG methods are runnable via the same CLI interface:
 
 ```bash
-cd sources
-python <file.py> --ttl_file <path> --nlq "<your question>"
+python <method>.py --ttl_file <KG> --nlq "<question>"
 ```
 
-Below are the four methods.
+Below, we describe each method in detail.
 
 ---
 
@@ -209,40 +188,46 @@ python schema_aware_rag.py.py   --ttl_file "../inputs/saref/saref_large.ttl"   -
 
 **Output:**  
 - SPARQL query for the NLQ.
+---
+
+## Test Results
+
+All results in the scope of our experiments under `test_results/` were generated using **Azure OpenAI** to ensure **experimental consistency with the accompanying publication**.
+
+- `packml/` → validation results  
+- `robotics/` → validation + detailed information retrieval  
+- `saref/` → extensive information retrieval benchmarks
 
 ---
 
 ## 🚀 Environment Setup
 
-### 1. Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Set your OpenAI API key
+### Configure API keys
 
+**OpenAI:**
 ```bash
 export OPENAI_API_KEY="your_key_here"
 ```
 
----
-
-## ▶️ Running the System End-to-End
-
-All methods use the same interface:
-
+**Azure OpenAI:**
+```bash
+export AZURE_OPENAI_API_KEY="your_key_here"
+export AZURE_OPENAI_ENDPOINT="https://<resource>.openai.azure.com"
+export AZURE_OPENAI_DEPLOYMENT="gpt-4o"
 ```
-python <rag_method>.py --ttl_file <KG> --nlq <question>
-```
-
-Preferred:
-
-- `our_rag.py` → full industrial RAG  
-- `schema_aware_rag.py` → Schema-aware RAG  
-- `lightweight_rag.py` → LLM baseline
-
 
 ---
 
+
+## Notes
+
+- Research prototype (not production-ready)
+- Azure OpenAI used for all reported results
+- Designed to balance **reproducibility**, **industrial realism**, and **confidentiality**
 

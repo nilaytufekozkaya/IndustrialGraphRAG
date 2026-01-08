@@ -1,0 +1,16 @@
+NLQ ID,Variation,NLQ,EL Acc,Query Generation Acc,Fail/Pass
+1,Exact,"How many instances of Robot are there? What are their Label?",5/5,5/5,Pass
+1,"Variation A","How many instances of robot are there? What are their labels?",5/5,5/5,Pass
+1,"Variation B","How many instances of robot are there? What are their names?",5/5,4/5,Pass
+2,Exact,"What are the RobotCategoryEnumeration in this knowledge graph?",5/5,5/5,Pass
+2,"Variation A","What categories of robots can be created using this model?",5/5,5/5,Pass
+2,"Variation B","What are the different types of robots that can be built with this model?",0/5,0/5,Fail
+3,Exact,"What are the components of ArticulatedRobot?",5/5,5/5,Pass
+3,"Variation A","What are the components of the articulated robot?",5/5,4/5,Pass
+3,"Variation B","What are the parts of the articulated robot?",5/5,5/5,Pass
+4,Exact,"Fetch the ActualPosition attribute of the ArticulatedRobot.",5/5,5/5,Pass
+4,"Variation A","Fetch the actual position attribute of the articulated robot.",5/5,3/5,Pass
+4,"Variation B","What is the real position of the articulated robot?",1/5,1/5,Fail
+5,Exact,"What are the possible values and their Label for the AxisMotionProfileEnumeration?",5/5,5/5,Pass
+5,"Variation A","What are the possible values and corresponding names for the axis motion profile enumeration?",5/5,5/5,Pass
+5,"Variation B","What are the different motion profile settings for an axis, along with their corresponding names?",0/5,0/5,Fail
