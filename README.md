@@ -223,3 +223,11 @@ export AZURE_OPENAI_DEPLOYMENT="gpt-4o"
 - Azure OpenAI used for all reported results
 - Designed to balance **reproducibility**, **industrial realism**, and **confidentiality**
 
+## Citation
+
+This repository has been archived on Zenodo to ensure reproducibility and provide a citable frozen version of the implementation:
+
+[![DOI](https://zenodo.org/badge/1097175087.svg)](https://doi.org/10.5281/zenodo.19289838)
+
+DOI: https://doi.org/10.5281/zenodo.19289838
+
