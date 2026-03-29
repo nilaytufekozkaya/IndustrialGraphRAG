@@ -227,7 +227,7 @@ export AZURE_OPENAI_DEPLOYMENT="gpt-4o"
 
 This repository has been archived on Zenodo to ensure reproducibility and provide a citable frozen version of the implementation:
 
-Concept: [![DOI](https://zenodo.org/badge/1097175087.svg)](https://doi.org/10.5281/zenodo.19289838)
+Concept: 10.5281/zenodo.19289838
 
-Frozen Release DOI: https://doi.org/10.5281/zenodo.19289838
+Frozen Release DOI: 10.5281/zenodo.19289839
 
